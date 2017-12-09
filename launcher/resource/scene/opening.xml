@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<layout id="null" sceneSize="960,640" next="supermario" previous="" eventSheet="openingEventSheet" version="2.2">
+<layout id="null" sceneSize="1280,1024" next="supermario" previous="" eventSheet="openingEventSheet" version="2.2">
   <layer index="0" parallaxX="100" parallaxY="100" layerAlpha="1" layerVisible="true" cacheAsBitmap="false" bgColor="" bgColorAlpha="" layerScaleX="100" layerScaleY="100"/>
   <layer index="1" parallaxX="100" parallaxY="100" layerAlpha="1" layerVisible="true" cacheAsBitmap="false" bgColor="" bgColorAlpha="" layerScaleX="100" layerScaleY="100"/>
   <item UID="2717" plugin="AISprite" name="AISprite2716" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="0" family="displayobject">
@@ -148,7 +148,7 @@
     <item name="uiGuid" value="2743" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
-    <item name="x" value="1034.3463968483213" valueDataType="number"/>
+    <item name="x" value="1034.346396848321" valueDataType="number"/>
     <item name="y" value="478.1679430239651" valueDataType="number"/>
     <item name="anchorX" value="0.4849215069875747" valueDataType="number"/>
     <item name="anchorY" value="0.5243086816775302" valueDataType="number"/>

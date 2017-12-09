@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="篝火" version="2.2" showFps="0" openLog="1" fps="60" scaleMode="0" orientaion="0" renderMode="1" bgColor="0" stagewidth="1920" stageheight="1080" startscenename="opening">
   <objects>
-    <type uiname="System" uitype="AISystem"/>
-    <type uiname="Keyboard" uitype="AIKeyboard"/>
-    <type uiname="Touch" uitype="AITouch"/>
-    <type uiname="Ajax" uitype="AIAjax"/>
-    <type uiname="Function" uitype="AIFunction"/>
-    <type uiname="WebStorage" uitype="AIWebStorage"/>
     <type uiname="WebSocket" uitype="AIWebSocket"/>
     <type uiname="Global" uitype="Global"/>
+    <type uiname="WebStorage" uitype="AIWebStorage"/>
+    <type uiname="System" uitype="AISystem"/>
+    <type uiname="Keyboard" uitype="AIKeyboard"/>
+    <type uiname="Function" uitype="AIFunction"/>
+    <type uiname="Touch" uitype="AITouch"/>
+    <type uiname="Ajax" uitype="AIAjax"/>
     <type uiname="Browser" uitype="AIBrowser"/>
     <type uiname="WeiXin" uitype="AIWeiXin"/>
     <type uiname="supermario" uitype="Scene"/>
     <type uiname="Layer1568" uitype="Layer"/>
     <type uiname="Layer2418" uitype="Layer"/>
-    <type uiname="enemy" uitype="AISprite"/>
     <type uiname="AITiledBackground2525" uitype="AITiledBackground"/>
     <type uiname="Layer2543" uitype="Layer"/>
     <type uiname="Layer2545" uitype="Layer"/>
@@ -40,12 +39,19 @@
     <type uiname="ghbt" uitype="AISprite"/>
     <type uiname="fire" uitype="AIMovieClip"/>
     <type uiname="飞砖" uitype="AISprite"/>
-    <type uiname="AITiledBackground2959" uitype="AITiledBackground"/>
     <type uiname="中砖" uitype="AISprite"/>
     <type uiname="左砖" uitype="AISprite"/>
     <type uiname="右砖" uitype="AISprite"/>
     <type uiname="kick1" uitype="AISprite"/>
-    <type uiname="AIMovieClip2979" uitype="AIMovieClip"/>
+    <type uiname="毒草蘑菇" uitype="AIMovieClip"/>
+    <type uiname="step1" uitype="AISprite"/>
+    <type uiname="step2" uitype="AISprite"/>
+    <type uiname="step3" uitype="AISprite"/>
+    <type uiname="AISprite2994" uitype="AISprite"/>
+    <type uiname="AISprite2997" uitype="AISprite"/>
+    <type uiname="AISprite3000" uitype="AISprite"/>
+    <type uiname="AISprite3003" uitype="AISprite"/>
+    <type uiname="step4" uitype="AISprite"/>
   </objects>
   <eventsheet>
     <sheet name="openingEventSheet" targetscene="opening">
@@ -392,11 +398,11 @@
         <actions>
           <action type="setValue" targetuiname="System" targetuitype="AISystem" isConflict="false" enabled="true">
             <properties>
-              <p key="10" propertyname="supermario_stop_run" valuetype="string" edittype="variable">
-                <description>%E8%AF%B7%E9%80%89%E6%8B%A9%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E4%B8%80%E4%B8%AA%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F%E3%80%82</description>
+              <p key="10" value="supermario_stop_run" valuetype="string" edittype="globalVariable">
+                <description>%E8%AF%B7%E9%80%89%E6%8B%A9%E4%B8%80%E4%B8%AA%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E3%80%82</description>
               </p>
-              <p key="11" value="1" valuetype="any">
-                <description>%E6%8C%87%E5%AE%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F%E8%A6%81%E8%AE%BE%E7%BD%AE%E7%9A%84%E5%80%BC%E3%80%82</description>
+              <p key="9" value="1" valuetype="any">
+                <description>%E6%8C%87%E5%AE%9A%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC%E3%80%82</description>
               </p>
             </properties>
           </action>
@@ -429,11 +435,24 @@
           <condition type="OnButtonBeginEvent" targetuiname="飞砖" targetuitype="AISprite" invert="false" operatorType="0" isConflict="false" enabled="true">
             <properties/>
           </condition>
+          <condition type="CompareVariableEvent" targetuiname="System" targetuitype="AISystem" invert="false" operatorType="0" isConflict="false" enabled="true">
+            <properties>
+              <p key="variable" value="supermario_stop_run" valuetype="string" edittype="globalVariable">
+                <description>%E9%80%89%E6%8B%A9%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E3%80%82</description>
+              </p>
+              <p key="operationType" value="%22notEqualTo%22" valuetype="string">
+                <description>%E9%80%89%E6%8B%A9%E6%AF%94%E8%BE%83%E8%BF%90%E7%AE%97%E7%AC%A6%E3%80%82</description>
+              </p>
+              <p key="value" value="1" valuetype="any">
+                <description>%E8%AF%B7%E8%BE%93%E5%85%A5%E7%94%A8%E4%BA%8E%E6%AF%94%E8%BE%83%E7%9A%84%E5%80%BC%E3%80%82</description>
+              </p>
+            </properties>
+          </condition>
         </conditons>
         <actions>
           <action type="moveToObject" targetuiname="飞砖" targetuitype="AISprite" isConflict="false" behaviorname="移动到目标" behavior="MoveToBehavior" enabled="true">
             <properties>
-              <p key="object" uiname="player" uitype="AISprite" valuetype="string" edittype="instance">
+              <p key="object" uiname="greenboy" uitype="AIMovieClip" valuetype="string" edittype="instance">
                 <description>%E5%AF%B9%E8%B1%A1</description>
               </p>
             </properties>
@@ -482,7 +501,7 @@
       <event name="null" enabled="true" relation="1" triggerOnceWhileTrue="false">
         <description>null</description>
         <conditons>
-          <condition type="OnCollisionWithOtherObjectEvent" targetuiname="player" targetuitype="AISprite" invert="false" operatorType="0" isConflict="false" enabled="true">
+          <condition type="OnCollisionWithOtherObjectEvent" targetuiname="player" targetuitype="AISprite" invert="false" operatorType="0" isConflict="false" enabled="false">
             <properties>
               <p key="object" uiname="kick1" uitype="AISprite" valuetype="string" edittype="instance">
                 <description>%E9%80%89%E6%8B%A9%E4%B8%8E%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%A2%B0%E6%92%9E%E7%9A%84%E5%85%B6%E4%BB%96%E5%AE%9E%E4%BE%8B%E3%80%82</description>
@@ -490,15 +509,7 @@
             </properties>
           </condition>
         </conditons>
-        <actions>
-          <action type="rotateClockWise" targetuiname="左砖" targetuitype="AISprite" isConflict="false" behaviorname="曲线" behavior="SinBehavior" enabled="true">
-            <properties>
-              <p key="10" value="10" valuetype="number">
-                <description>%E6%AF%8F%E6%AC%A1%E9%A1%BA%E6%97%B6%E9%92%88%E6%97%8B%E8%BD%AC%E7%9A%84%E8%A7%92%E5%BA%A6%E3%80%82</description>
-              </p>
-            </properties>
-          </action>
-        </actions>
+        <actions/>
         <subevent/>
       </event>
       <event name="null" enabled="true" relation="1" triggerOnceWhileTrue="false">
@@ -553,11 +564,56 @@
           </action>
           <action type="setValue" targetuiname="System" targetuitype="AISystem" isConflict="false" enabled="true">
             <properties>
-              <p key="10" propertyname="supermario_stop_run" valuetype="string" edittype="variable">
-                <description>%E8%AF%B7%E9%80%89%E6%8B%A9%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E4%B8%80%E4%B8%AA%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F%E3%80%82</description>
+              <p key="10" value="supermario_stop_run" valuetype="string" edittype="globalVariable">
+                <description>%E8%AF%B7%E9%80%89%E6%8B%A9%E4%B8%80%E4%B8%AA%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E3%80%82</description>
               </p>
-              <p key="11" value="1" valuetype="any">
-                <description>%E6%8C%87%E5%AE%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F%E8%A6%81%E8%AE%BE%E7%BD%AE%E7%9A%84%E5%80%BC%E3%80%82</description>
+              <p key="9" value="1" valuetype="any">
+                <description>%E6%8C%87%E5%AE%9A%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC%E3%80%82</description>
+              </p>
+            </properties>
+          </action>
+        </actions>
+        <subevent/>
+      </event>
+      <event name="null" enabled="true" relation="1" triggerOnceWhileTrue="false">
+        <description>null</description>
+        <conditons>
+          <condition type="OnCollisionWithOtherObjectEvent" targetuiname="毒草蘑菇" targetuitype="AIMovieClip" invert="false" operatorType="0" isConflict="false" enabled="true">
+            <properties>
+              <p key="object" uiname="player" uitype="AISprite" valuetype="string" edittype="instance">
+                <description>%E9%80%89%E6%8B%A9%E4%B8%8E%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%A2%B0%E6%92%9E%E7%9A%84%E5%85%B6%E4%BB%96%E5%AE%9E%E4%BE%8B%E3%80%82</description>
+              </p>
+            </properties>
+          </condition>
+        </conditons>
+        <actions>
+          <action type="setAction" targetuiname="greenboy" targetuitype="AIMovieClip" isConflict="false" enabled="true">
+            <properties>
+              <p key="frameType" value="1" valuetype="number">
+                <description>%E8%AE%BE%E7%BD%AE%E4%BB%8E%E5%93%AA%E9%87%8C%E5%BC%80%E5%A7%8B%E6%92%AD%E6%94%BE%E3%80%82</description>
+              </p>
+              <p key="action" value="%22trancate%22" valuetype="string">
+                <description>%E8%AE%BE%E7%BD%AE%E6%92%AD%E6%94%BE%E7%9A%84%E5%8A%A8%E7%94%BB%E5%89%AA%E8%BE%91%E3%80%82</description>
+              </p>
+            </properties>
+          </action>
+          <action type="setAction" targetuiname="毒草蘑菇" targetuitype="AIMovieClip" isConflict="false" enabled="true">
+            <properties>
+              <p key="frameType" value="1" valuetype="number">
+                <description>%E8%AE%BE%E7%BD%AE%E4%BB%8E%E5%93%AA%E9%87%8C%E5%BC%80%E5%A7%8B%E6%92%AD%E6%94%BE%E3%80%82</description>
+              </p>
+              <p key="action" value="%22yeah%22" valuetype="string">
+                <description>%E8%AE%BE%E7%BD%AE%E6%92%AD%E6%94%BE%E7%9A%84%E5%8A%A8%E7%94%BB%E5%89%AA%E8%BE%91%E3%80%82</description>
+              </p>
+            </properties>
+          </action>
+          <action type="setValue" targetuiname="System" targetuitype="AISystem" isConflict="false" enabled="true">
+            <properties>
+              <p key="10" value="supermario_stop_run" valuetype="string" edittype="globalVariable">
+                <description>%E8%AF%B7%E9%80%89%E6%8B%A9%E4%B8%80%E4%B8%AA%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E3%80%82</description>
+              </p>
+              <p key="9" value="1" valuetype="any">
+                <description>%E6%8C%87%E5%AE%9A%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC%E3%80%82</description>
               </p>
             </properties>
           </action>
@@ -570,8 +626,8 @@
     <object type="Scene" uiname="opening" layer="1">
       <familys/>
       <properties>
-        <p key="sceneWidth" value="960" valuetype="number"/>
-        <p key="sceneHeight" value="640" valuetype="number"/>
+        <p key="sceneWidth" value="1280" valuetype="number"/>
+        <p key="sceneHeight" value="1024" valuetype="number"/>
         <p key="width" value="1920" valuetype="number"/>
         <p key="height" value="1080" valuetype="number"/>
       </properties>
@@ -580,8 +636,8 @@
       <children>
         <object type="Layer" uiname="Layer2935" parallaxX="100" parallaxY="100" layer="1">
           <properties>
-            <p key="sceneWidth" value="1708" valuetype="number"/>
-            <p key="sceneHeight" value="960" valuetype="number"/>
+            <p key="sceneWidth" value="1280" valuetype="number"/>
+            <p key="sceneHeight" value="1024" valuetype="number"/>
             <p key="parallaxX" value="100" valuetype="number"/>
             <p key="parallaxY" value="100" valuetype="number"/>
             <p key="layerAlpha" value="1" valuetype="number"/>
@@ -596,8 +652,8 @@
         </object>
         <object type="Layer" uiname="Layer2714" parallaxX="100" parallaxY="100" layer="0">
           <properties>
-            <p key="sceneWidth" value="960" valuetype="number"/>
-            <p key="sceneHeight" value="640" valuetype="number"/>
+            <p key="sceneWidth" value="1280" valuetype="number"/>
+            <p key="sceneHeight" value="1024" valuetype="number"/>
             <p key="parallaxX" value="100" valuetype="number"/>
             <p key="parallaxY" value="100" valuetype="number"/>
             <p key="layerAlpha" value="1" valuetype="number"/>
@@ -872,7 +928,7 @@
                 <p key="visible" value="true" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
                 </p>
-                <p key="x" value="1034.3463968483213" valuetype="number">
+                <p key="x" value="1034.346396848321" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
                 </p>
                 <p key="y" value="478.1679430239651" valuetype="number">
@@ -1448,16 +1504,16 @@
                 <p key="visible" value="true" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
                 </p>
-                <p key="x" value="1494.3534072956356" valuetype="number">
+                <p key="x" value="978.3496856199483" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="y" value="22.641644243081487" valuetype="number">
+                <p key="y" value="447.47895764702935" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="anchorX" value="4.0393534166761595" valuetype="number">
+                <p key="anchorX" value="0.44005745204778607" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="anchorY" value="-4.0035145503382195" valuetype="number">
+                <p key="anchorY" value="0.5077680118364968" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
                 </p>
                 <p key="width" value="88.9471461465962" valuetype="number">
@@ -1478,10 +1534,10 @@
                 <p key="collision" value="true" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
                 </p>
-                <p key="collisionData" value="0%2Fn0.00%7C91.41%2C88.95%7C91.41%2C88.95%7C0.00%2C0.00%7C0.00" valuetype="string" edittype="collisionData">
+                <p key="collisionData" value="0%2Fn6.75%7C21.00%2C0.00%7C91.41%2C88.95%7C91.41%2C83.15%7C28.70%2C44.05%7C0.80" valuetype="string" edittype="collisionData">
                   <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
                 </p>
-                <p key="actions" value="%7B%22scaleY%22%3A1%2C%22fps%22%3A6%2C%22loop%22%3A0%2C%22action%22%3A%22run%22%2C%22scaleX%22%3A1%2C%22frames%22%3A%5B%7B%22_1637%22%3Anull%2C%22width%22%3Anull%2C%22_1636%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E6%9C%A8%E6%9D%90%E5%A0%86-%E7%81%AB1.png%22%2C%22height%22%3Anull%7D%2C%7B%22_1637%22%3Anull%2C%22width%22%3Anull%2C%22_1636%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E6%9C%A8%E6%9D%90%E5%A0%86-%E7%81%AB2.png%22%2C%22height%22%3Anull%7D%5D%7D%26%26%7B%22scaleY%22%3A1%2C%22fps%22%3A3%2C%22loop%22%3A1%2C%22action%22%3A%22%E6%88%91%E8%AE%A9%E4%BD%A0%E7%81%AD%22%2C%22scaleX%22%3A1%2C%22frames%22%3A%5B%7B%22_1637%22%3Anull%2C%22width%22%3Anull%2C%22_1636%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E6%9C%A8%E6%9D%90%E5%A0%86-%E7%81%AB1.png%22%2C%22height%22%3Anull%7D%2C%7B%22_1637%22%3Anull%2C%22width%22%3Anull%2C%22_1636%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E6%9C%A8%E6%9D%90%E5%A0%86-%E6%BC%94.png%22%2C%22height%22%3Anull%7D%2C%7B%22_1637%22%3Anull%2C%22width%22%3Anull%2C%22_1636%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E6%9C%A8%E6%9D%90%E5%A0%86-%E7%81%AB%E6%98%9F.png%22%2C%22height%22%3Anull%7D%5D%7D" valuetype="string" edittype="animation">
+                <p key="actions" value="%7B%22scaleY%22%3A1%2C%22fps%22%3A6%2C%22loop%22%3A0%2C%22action%22%3A%22run%22%2C%22frames%22%3A%5B%7B%22_1636%22%3A0%2C%22width%22%3A0%2C%22_1637%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E6%9C%A8%E6%9D%90%E5%A0%86-%E7%81%AB1.png%22%2C%22height%22%3A0%7D%2C%7B%22_1636%22%3A0%2C%22width%22%3A0%2C%22_1637%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E6%9C%A8%E6%9D%90%E5%A0%86-%E7%81%AB2.png%22%2C%22height%22%3A0%7D%5D%2C%22scaleX%22%3A1%7D%26%26%7B%22scaleY%22%3A1%2C%22fps%22%3A3%2C%22loop%22%3A1%2C%22action%22%3A%22%E6%88%91%E8%AE%A9%E4%BD%A0%E7%81%AD%22%2C%22frames%22%3A%5B%7B%22_1636%22%3A0%2C%22width%22%3A0%2C%22_1637%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E6%9C%A8%E6%9D%90%E5%A0%86-%E7%81%AB1.png%22%2C%22height%22%3A0%7D%2C%7B%22_1636%22%3A0%2C%22width%22%3A0%2C%22_1637%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E6%9C%A8%E6%9D%90%E5%A0%86-%E6%BC%94.png%22%2C%22height%22%3A0%7D%2C%7B%22_1636%22%3A0%2C%22width%22%3A0%2C%22_1637%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E6%9C%A8%E6%9D%90%E5%A0%86-%E7%81%AB%E6%98%9F.png%22%2C%22height%22%3A0%7D%5D%2C%22scaleX%22%3A1%7D" valuetype="string" edittype="animation">
                   <description>%E7%82%B9%E5%87%BB%E6%8C%89%E7%BA%BD%E7%BC%96%E8%BE%91%E5%8A%A8%E7%94%BB</description>
                 </p>
               </properties>
@@ -1503,10 +1559,10 @@
                 <p key="visible" value="false" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
                 </p>
-                <p key="x" value="1293.9" valuetype="number">
+                <p key="x" value="1100.9" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="y" value="578.52" valuetype="number">
+                <p key="y" value="591.52" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E5%9D%90%E6%A0%87</description>
                 </p>
                 <p key="anchorX" value="1.6374389239784473" valuetype="number">
@@ -1577,61 +1633,6 @@
           <customproperties/>
           <behaviors/>
           <children>
-            <object type="AIMovieClip" uiname="AIMovieClip2979" layer="2">
-              <properties>
-                <p key="name" value="AIMovieClip2979" valuetype="string">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%B1%BB%E5%9E%8B%E5%90%8D%E7%A7%B0%EF%BC%8C%E8%BF%99%E4%B9%9F%E5%B0%B1%E6%98%AF%E8%AF%B4%EF%BC%8C%E5%A4%9A%E4%B8%AA%E5%AE%9E%E4%BE%8B%E5%8F%AF%E8%83%BD%E4%BC%9A%E6%9C%89%E7%9B%B8%E5%90%8C%E7%9A%84%E5%90%8D%E5%AD%97%EF%BC%8C%E8%80%8C%E5%90%8C%E4%B8%80%E7%B1%BB%E5%9E%8B%E5%AE%9E%E4%BE%8B%E4%BC%9A%E5%85%B7%E5%A4%87%E7%9B%B8%E5%90%8C%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E4%B8%8E%E8%A1%8C%E4%B8%BA</description>
-                </p>
-                <p key="uiGuid" value="2980" valuetype="string">
-                  <description>%E7%BC%96%E8%BE%91%E5%99%A8%E7%94%9F%E6%88%90%E7%9A%84%E5%94%AF%E4%B8%80id</description>
-                </p>
-                <p key="global" value="false" valuetype="boolean">
-                  <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E4%B8%BA%E5%85%A8%E5%B1%80%E5%AE%9E%E4%BE%8B%EF%BC%8C%E5%85%A8%E5%B1%80%E5%AE%9E%E4%BE%8B%E5%9C%A8%E8%B7%A8%E5%9C%BA%E6%99%AF%E5%90%8E%E4%B8%8D%E4%BC%9A%E8%A2%AB%E9%94%80%E6%AF%81%EF%BC%8C%E4%BB%8D%E7%84%B6%E4%BC%9A%E8%A2%AB%E4%BF%9D%E7%95%99%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%85%B6%E6%9C%AC%E8%BA%AB%E5%B8%A6%E7%9A%84%E6%95%B0%E6%8D%AE%E4%B9%9F%E4%BC%9A%E4%BF%9D%E7%95%99</description>
-                </p>
-                <p key="visible" value="true" valuetype="boolean">
-                  <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
-                </p>
-                <p key="x" value="717.6433241266493" valuetype="number">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
-                </p>
-                <p key="y" value="-130.72385619327744" valuetype="number">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E5%9D%90%E6%A0%87</description>
-                </p>
-                <p key="anchorX" value="4.50477747088831" valuetype="number">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
-                </p>
-                <p key="anchorY" value="0.9875381268907517" valuetype="number">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
-                </p>
-                <p key="width" value="100" valuetype="number">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%AE%BD%E5%BA%A6</description>
-                </p>
-                <p key="height" value="30" valuetype="number">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%AB%98%E5%BA%A6</description>
-                </p>
-                <p key="angle" value="0" valuetype="number">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E8%87%AA%E8%BA%AB%E8%A7%92%E5%BA%A6</description>
-                </p>
-                <p key="alpha" value="1" valuetype="number">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%80%8F%E6%98%8E%E5%BA%A6</description>
-                </p>
-                <p key="enabled" value="false" valuetype="boolean">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E9%BB%98%E8%AE%A4%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81%E8%A7%A6%E6%91%B8</description>
-                </p>
-                <p key="collision" value="false" valuetype="boolean">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
-                </p>
-                <p key="collisionData" value="%22%22" valuetype="string">
-                  <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
-                </p>
-                <p key="actions" value="%7B%22scaleY%22%3A1%2C%22fps%22%3A6%2C%22loop%22%3A0%2C%22action%22%3A%22%E5%8A%A8%E7%94%BB%22%2C%22scaleX%22%3A1%2C%22frames%22%3A%5B%5D%7D" valuetype="string" edittype="animation">
-                  <description>%E7%82%B9%E5%87%BB%E6%8C%89%E7%BA%BD%E7%BC%96%E8%BE%91%E5%8A%A8%E7%94%BB</description>
-                </p>
-              </properties>
-              <customproperties/>
-              <behaviors/>
-              <children/>
-            </object>
             <object type="AISprite" uiname="右砖" layer="2">
               <properties>
                 <p key="name" value="%E5%8F%B3%E7%A0%96" valuetype="string">
@@ -1646,16 +1647,16 @@
                 <p key="visible" value="true" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
                 </p>
-                <p key="x" value="782.3110550884753" valuetype="number">
+                <p key="x" value="972.2142589670428" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="y" value="524.1578898230491" valuetype="number">
+                <p key="y" value="532.7425149381695" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="anchorX" value="-3.3210589285837377" valuetype="number">
+                <p key="anchorX" value="0.3923049178788114" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="anchorY" value="0.45415361649609925" valuetype="number">
+                <p key="anchorY" value="0.42162623664010296" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
                 </p>
                 <p key="width" value="105" valuetype="number">
@@ -1679,12 +1680,23 @@
                 <p key="collision" value="true" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
                 </p>
-                <p key="collisionData" value="%22%22" valuetype="string">
+                <p key="collisionData" value="%5Bobject%20_214%5D" valuetype="string">
                   <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
                 </p>
               </properties>
               <customproperties/>
-              <behaviors/>
+              <behaviors>
+                <b name="刚体" type="SolidBehaivor">
+                  <properties/>
+                </b>
+                <b name="节点移动" type="NodeMovingBehavior">
+                  <properties>
+                    <p key="moveSpeed" value="60" valuetype="number">
+                      <description>%E7%A7%BB%E5%8A%A8%E7%9A%84%E9%80%9F%E5%BA%A6%E3%80%82%EF%BC%88%E5%8D%95%E4%BD%8D%EF%BC%9A%E5%83%8F%E7%B4%A0%2F%E7%A7%92%EF%BC%89%E3%80%82</description>
+                    </p>
+                  </properties>
+                </b>
+              </behaviors>
               <children/>
             </object>
             <object type="AISprite" uiname="左砖" layer="2">
@@ -1701,16 +1713,16 @@
                 <p key="visible" value="true" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
                 </p>
-                <p key="x" value="1252.5058263271312" valuetype="number">
+                <p key="x" value="659.7946046687141" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="y" value="523.1052754423771" valuetype="number">
+                <p key="y" value="537.2511963882828" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="anchorX" value="4.205185506646814" valuetype="number">
+                <p key="anchorX" value="0.4555548241856979" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="anchorY" value="0.4463318085902864" valuetype="number">
+                <p key="anchorY" value="0.4667691509322443" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
                 </p>
                 <p key="width" value="105" valuetype="number">
@@ -1743,37 +1755,6 @@
                 <b name="刚体" type="SolidBehaivor">
                   <properties/>
                 </b>
-                <b name="曲线" type="SinBehavior">
-                  <properties>
-                    <p key="active" value="0" valuetype="number">
-                      <description>%E5%AE%9E%E4%BE%8B%E5%88%9B%E5%BB%BA%E6%97%B6%E7%AB%8B%E5%8D%B3%E5%BA%94%E7%94%A8%E6%9B%B2%E7%BA%BF%E6%95%88%E6%9E%9C%E3%80%82</description>
-                    </p>
-                    <p key="movement" value="1" valuetype="number">
-                      <description>%E6%8C%87%E5%AE%9A%E5%BA%94%E7%94%A8%E6%9B%B2%E7%BA%BF%E6%95%88%E6%9E%9C%E7%9A%84%E8%BF%90%E5%8A%A8%E7%B1%BB%E5%9E%8B%E3%80%82</description>
-                    </p>
-                    <p key="wave" value="0" valuetype="number">
-                      <description>%E8%AE%BE%E7%BD%AE%E6%9B%B2%E7%BA%BF%E6%95%88%E6%9E%9C%E7%9A%84%E6%B3%A2%E5%9E%8B%E3%80%82</description>
-                    </p>
-                    <p key="period" value="1" valuetype="number">
-                      <description>%E8%AE%BE%E7%BD%AE%E6%9B%B2%E7%BA%BF%E7%9A%84%E5%91%A8%E6%9C%9F%EF%BC%8C%E4%B9%9F%E5%B0%B1%E6%98%AF%E6%95%88%E6%9E%9C%E5%BE%AA%E7%8E%AF%E4%B8%80%E6%AC%A1%E6%89%80%E9%9C%80%E8%A6%81%E7%9A%84%E6%97%B6%E9%97%B4%E3%80%82%EF%BC%88%E5%8D%95%E4%BD%8D%EF%BC%9A%E7%A7%92%EF%BC%89</description>
-                    </p>
-                    <p key="periodRandom" value="0" valuetype="number">
-                      <description>%E7%BB%99%E5%91%A8%E6%9C%9F%E6%97%B6%E9%97%B4%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E9%9A%8F%E6%9C%BA%E6%95%B0%E3%80%82%EF%BC%88%E5%8D%95%E4%BD%8D%EF%BC%9A%E7%A7%92%EF%BC%89%0A%E4%BE%8B%E5%A6%82%EF%BC%9A%E5%91%A8%E6%9C%9F%E4%B8%BA2%EF%BC%8C%E9%9A%8F%E6%9C%BA%E6%95%B0%E4%B9%9F%E4%B8%BA2%EF%BC%8C%E5%88%99%E5%AE%9E%E9%99%85%E7%9A%84%E5%91%A8%E6%9C%9F%E4%BC%9A%E6%98%AF%E5%9C%A82%E5%88%B04%E4%B9%8B%E9%97%B4%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%95%B0%E5%80%BC%E3%80%82%0A%E9%9A%8F%E6%9C%BA%E6%95%B0%E5%80%BC%E5%9C%A8%E6%9B%B2%E7%BA%BF%E5%88%9D%E5%A7%8B%E5%8C%96%E6%97%B6%E4%BA%A7%E7%94%9F%E5%B9%B6%E5%92%8C%E8%AE%BE%E7%BD%AE%E5%91%A8%E6%9C%9F%E5%80%BC%E7%9B%B8%E5%8A%A0%EF%BC%8C%E5%88%9D%E5%A7%8B%E5%8C%96%E5%90%8E%E5%AE%9E%E9%99%85%E5%91%A8%E6%9C%9F%E4%BE%BF%E5%9B%BA%E5%AE%9A%E4%B8%8D%E5%8F%98%E4%BA%86%E3%80%82%EF%BC%89</description>
-                    </p>
-                    <p key="periodOffset" value="0" valuetype="number">
-                      <description>%E5%91%A8%E6%9C%9F%E5%81%8F%E7%A7%BB%E5%80%BC%E3%80%82%E8%AE%BE%E7%BD%AE%E6%9B%B2%E7%BA%BF%E5%9C%A8X%E8%BD%B4%E6%96%B9%E5%90%91%E7%9A%84%E5%81%8F%E7%A7%BB%E5%80%BC%E3%80%82%EF%BC%88%E5%8D%95%E4%BD%8D%EF%BC%9A%E7%A7%92%EF%BC%89%0A%E4%BE%8B%E5%A6%82%EF%BC%9A%E6%9B%B2%E7%BA%BF%E6%8C%AF%E5%B9%85%E4%B8%BA1%EF%BC%8C%E5%91%A8%E6%9C%9F%E4%B8%BA2%E7%A7%92%EF%BC%8C%E9%BB%98%E8%AE%A4%E6%9B%B2%E7%BA%BF%E5%80%BC%E7%94%B10%E5%BC%80%E5%A7%8B%E3%80%82%E5%81%8F%E7%A7%BB0.5%E7%A7%92%EF%BC%8C%E5%88%99%E6%9B%B2%E7%BA%BF%E5%80%BC%E4%BB%8E1%E5%BC%80%E5%A7%8B%E3%80%82</description>
-                    </p>
-                    <p key="periodOffsetRandom" value="0" valuetype="number">
-                      <description>%E5%91%A8%E6%9C%9F%E5%81%8F%E7%A7%BB%E5%80%BC%E9%9A%8F%E6%9C%BA%E6%95%B0%E3%80%82%EF%BC%88%E5%8D%95%E4%BD%8D%EF%BC%9A%E7%A7%92%EF%BC%89%0A%E4%BE%8B%E5%A6%82%EF%BC%9A%E5%81%8F%E7%A7%BB%E5%80%BC%E4%B8%BA0.5%EF%BC%8C%E9%9A%8F%E6%9C%BA%E6%95%B0%E4%B8%BA1%EF%BC%8C%E5%88%99%E5%AE%9E%E9%99%85%E7%9A%84%E5%81%8F%E7%A7%BB%E5%80%BC%E4%BC%9A%E6%98%AF%E5%9C%A80.5%E5%88%B01.5%E4%B9%8B%E9%97%B4%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%95%B0%E5%80%BC%E3%80%82%0A%E9%9A%8F%E6%9C%BA%E6%95%B0%E5%80%BC%E5%9C%A8%E6%9B%B2%E7%BA%BF%E5%88%9D%E5%A7%8B%E5%8C%96%E6%97%B6%E4%BA%A7%E7%94%9F%E5%B9%B6%E5%92%8C%E8%AE%BE%E7%BD%AE%E5%81%8F%E7%A7%BB%E5%80%BC%E7%9B%B8%E5%8A%A0%EF%BC%8C%E5%88%9D%E5%A7%8B%E5%8C%96%E5%90%8E%E5%AE%9E%E9%99%85%E5%81%8F%E7%A7%BB%E5%80%BC%E4%BE%BF%E5%9B%BA%E5%AE%9A%E4%B8%8D%E5%8F%98%E4%BA%86%E3%80%82</description>
-                    </p>
-                    <p key="magnitude" value="50" valuetype="number">
-                      <description>%E6%9B%B2%E7%BA%BF%E7%9A%84%E6%8C%AF%E5%B9%85%EF%BC%8C%E5%86%B3%E5%AE%9A%E4%BA%86%E6%9B%B2%E7%BA%BF%E7%9A%84%E5%AE%9E%E4%BE%8B%E7%9A%84%E8%BF%90%E5%8A%A8%E8%8C%83%E5%9B%B4%E5%8F%AF%E5%8F%96%E5%88%B0%E7%9A%84%E6%9C%80%E5%A4%A7%E6%88%96%E6%9C%80%E5%B0%8F%E5%80%BC%E3%80%82%EF%BC%88%E5%8D%95%E4%BD%8D%EF%BC%9A%E4%B8%8E%E8%BF%90%E5%8A%A8%E7%B1%BB%E5%9E%8B%E7%9B%B8%E5%85%B3%EF%BC%89</description>
-                    </p>
-                    <p key="magnitudeRandom" value="0" valuetype="number">
-                      <description>%E6%8C%AF%E5%B9%85%E9%9A%8F%E6%9C%BA%E6%95%B0%E3%80%82%0A%E4%BE%8B%E5%A6%82%EF%BC%9A%E6%8C%AF%E5%B9%85%E4%B8%BA1%EF%BC%8C%E9%9A%8F%E6%9C%BA%E6%95%B0%E4%B8%BA2%EF%BC%8C%E5%88%99%E5%AE%9E%E9%99%85%E7%9A%84%E5%81%8F%E7%A7%BB%E5%80%BC%E4%BC%9A%E6%98%AF%E5%9C%A81%E5%88%B03%E4%B9%8B%E9%97%B4%E7%9A%84%E9%9A%8F%E6%9C%BA%E6%95%B0%E5%80%BC%E3%80%82%0A%E9%9A%8F%E6%9C%BA%E6%95%B0%E5%80%BC%E5%9C%A8%E6%9B%B2%E7%BA%BF%E5%88%9D%E5%A7%8B%E5%8C%96%E6%97%B6%E4%BA%A7%E7%94%9F%E5%B9%B6%E5%92%8C%E8%AE%BE%E7%BD%AE%E6%8C%AF%E5%B9%85%E7%9B%B8%E5%8A%A0%EF%BC%8C%E5%88%9D%E5%A7%8B%E5%8C%96%E5%90%8E%E5%AE%9E%E9%99%85%E6%8C%AF%E5%B9%85%E5%80%BC%E4%BE%BF%E5%9B%BA%E5%AE%9A%E4%B8%8D%E5%8F%98%E4%BA%86%E3%80%82</description>
-                    </p>
-                  </properties>
-                </b>
               </behaviors>
               <children/>
             </object>
@@ -1791,16 +1772,16 @@
                 <p key="visible" value="true" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
                 </p>
-                <p key="x" value="1022.6007542894731" valuetype="number">
+                <p key="x" value="824.1599303707308" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="y" value="530.4011418504992" valuetype="number">
+                <p key="y" value="542.5070572580682" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="anchorX" value="0.4965787151563756" valuetype="number">
+                <p key="anchorX" value="0.49854657372258115" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="anchorY" value="0.5161635580805545" valuetype="number">
+                <p key="anchorY" value="0.5203020733021254" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
                 </p>
                 <p key="width" value="215" valuetype="number">
@@ -1824,13 +1805,13 @@
                 <p key="collision" value="true" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
                 </p>
-                <p key="collisionData" value="%22%22" valuetype="string">
+                <p key="collisionData" value="%5Bobject%20_214%5D" valuetype="string">
                   <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
                 </p>
               </properties>
               <customproperties/>
               <behaviors>
-                <b name="跳穿" type="JumpthruBehavior">
+                <b name="刚体" type="SolidBehaivor">
                   <properties/>
                 </b>
               </behaviors>
@@ -1850,10 +1831,10 @@
                 <p key="visible" value="true" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
                 </p>
-                <p key="x" value="862.7" valuetype="number">
+                <p key="x" value="665.7" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="y" value="585.36" valuetype="number">
+                <p key="y" value="599.36" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E5%9D%90%E6%A0%87</description>
                 </p>
                 <p key="anchorX" value="0.5" valuetype="number">
@@ -1874,7 +1855,7 @@
                 <p key="alpha" value="1" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%80%8F%E6%98%8E%E5%BA%A6</description>
                 </p>
-                <p key="url" value="%22%22" valuetype="string">
+                <p key="url" value="resource%2FuserAsset%2Flauncher%2F%22%22" valuetype="string">
                   <description>%E5%9B%BE%E7%89%87%E6%BA%90</description>
                 </p>
                 <p key="enabled" value="false" valuetype="boolean">
@@ -1905,22 +1886,22 @@
                 <p key="visible" value="true" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
                 </p>
-                <p key="x" value="1424.2247245576234" valuetype="number">
+                <p key="x" value="1085.3300259891626" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="y" value="444.97" valuetype="number">
+                <p key="y" value="554.2166071839168" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="anchorX" value="1.7390885040334512" valuetype="number">
+                <p key="anchorX" value="0.46482521441454216" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="anchorY" value="-0.7181794006276798" valuetype="number">
+                <p key="anchorY" value="0.4893516824254023" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
                 </p>
                 <p key="width" value="109" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%AE%BD%E5%BA%A6</description>
                 </p>
-                <p key="height" value="79" valuetype="number">
+                <p key="height" value="78.2" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%AB%98%E5%BA%A6</description>
                 </p>
                 <p key="angle" value="0" valuetype="number">
@@ -1938,7 +1919,7 @@
                 <p key="collision" value="true" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
                 </p>
-                <p key="collisionData" value="0%2Fn0.00%7C79.00%2C109.00%7C79.00%2C108.10%7C-1.90%2C0.00%7C0.00" valuetype="string" edittype="collisionData">
+                <p key="collisionData" value="0%2Fn0.00%7C78.20%2C109.00%7C78.20%2C108.10%7C-1.88%2C0.00%7C0.00" valuetype="string" edittype="collisionData">
                   <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
                 </p>
               </properties>
@@ -1987,16 +1968,16 @@
                 <p key="visible" value="true" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
                 </p>
-                <p key="x" value="199.35874598571962" valuetype="number">
+                <p key="x" value="239.03846117252695" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="y" value="711.7656072722751" valuetype="number">
+                <p key="y" value="790.8618005894347" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="anchorX" value="0.46530127630474283" valuetype="number">
+                <p key="anchorX" value="0.49720349756205734" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="anchorY" value="-0.26241809677838623" valuetype="number">
+                <p key="anchorY" value="0.13306286980741164" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
                 </p>
                 <p key="width" value="100" valuetype="number">
@@ -2017,10 +1998,10 @@
                 <p key="collision" value="true" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
                 </p>
-                <p key="collisionData" value="0%2Fn13.59%7C200.35%2C87.23%7C201.95%2C86.52%7C158.91%2C96.80%7C122.66%2C79.73%7C89.96%2C47.77%7C79.73%2C15.59%7C94.06%2C15.86%7C151.52" valuetype="string" edittype="collisionData">
+                <p key="collisionData" value="0%2Fn13.59%7C200.35%2C87.23%7C201.95%2C99.15%7C203.50%2C104.00%7C194.60%2C96.20%7C158.45%2C104.75%7C122.65%2C99.35%7C87.75%2C95.00%7C32.25%2C87.45%7C16.90%2C71.50%7C-1.65%2C33.40%7C-0.15%2C13.30%7C11.95%2C5.10%7C39.15%2C21.60%7C70.15%2C-4.00%7C102.25%2C-3.50%7C148.00%2C2.50%7C176.95%2C-4.05%7C202.25" valuetype="string" edittype="collisionData">
                   <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
                 </p>
-                <p key="actions" value="%7B%22scaleY%22%3A1%2C%22fps%22%3A6%2C%22loop%22%3A0%2C%22action%22%3A%22stand%22%2C%22scaleX%22%3A1%2C%22frames%22%3A%5B%7B%22_1637%22%3Anull%2C%22width%22%3Anull%2C%22_1636%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E9%9D%99%E6%AD%A2.png%22%2C%22height%22%3Anull%7D%5D%7D%26%26%7B%22scaleY%22%3A1%2C%22fps%22%3A4%2C%22loop%22%3A0%2C%22action%22%3A%22run%22%2C%22scaleX%22%3A1%2C%22frames%22%3A%5B%7B%22_1637%22%3Anull%2C%22width%22%3Anull%2C%22_1636%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E8%B7%911.png%22%2C%22height%22%3Anull%7D%2C%7B%22_1637%22%3Anull%2C%22width%22%3Anull%2C%22_1636%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E8%B7%912.png%22%2C%22height%22%3Anull%7D%5D%7D%26%26%7B%22scaleY%22%3A1%2C%22fps%22%3A12%2C%22loop%22%3A0%2C%22action%22%3A%22yeah%22%2C%22scaleX%22%3A1%2C%22frames%22%3A%5B%7B%22_1637%22%3Anull%2C%22width%22%3Anull%2C%22_1636%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E8%83%9C%E5%88%A91.png%22%2C%22height%22%3Anull%7D%2C%7B%22_1637%22%3Anull%2C%22width%22%3Anull%2C%22_1636%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E8%83%9C%E5%88%A92.png%22%2C%22height%22%3Anull%7D%5D%7D%26%26%7B%22scaleY%22%3A1%2C%22fps%22%3A6%2C%22loop%22%3A0%2C%22action%22%3A%22jump%22%2C%22scaleX%22%3A1%2C%22frames%22%3A%5B%7B%22_1637%22%3Anull%2C%22width%22%3Anull%2C%22_1636%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E8%B7%B3.png%22%2C%22height%22%3Anull%7D%5D%7D" valuetype="string" edittype="animation">
+                <p key="actions" value="%7B%22scaleY%22%3A1%2C%22fps%22%3A6%2C%22loop%22%3A0%2C%22action%22%3A%22stand%22%2C%22frames%22%3A%5B%7B%22_1636%22%3A0%2C%22width%22%3A0%2C%22_1637%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E9%9D%99%E6%AD%A2.png%22%2C%22height%22%3A0%7D%5D%2C%22scaleX%22%3A1%7D%26%26%7B%22scaleY%22%3A1%2C%22fps%22%3A4%2C%22loop%22%3A0%2C%22action%22%3A%22run%22%2C%22frames%22%3A%5B%7B%22_1636%22%3A0%2C%22width%22%3A0%2C%22_1637%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E8%B7%911.png%22%2C%22height%22%3A0%7D%2C%7B%22_1636%22%3A0%2C%22width%22%3A0%2C%22_1637%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E8%B7%912.png%22%2C%22height%22%3A0%7D%5D%2C%22scaleX%22%3A1%7D%26%26%7B%22scaleY%22%3A1%2C%22fps%22%3A12%2C%22loop%22%3A0%2C%22action%22%3A%22yeah%22%2C%22frames%22%3A%5B%7B%22_1636%22%3A0%2C%22width%22%3A0%2C%22_1637%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E8%83%9C%E5%88%A91.png%22%2C%22height%22%3A0%7D%2C%7B%22_1636%22%3A0%2C%22width%22%3A0%2C%22_1637%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E8%83%9C%E5%88%A92.png%22%2C%22height%22%3A0%7D%5D%2C%22scaleX%22%3A1%7D%26%26%7B%22scaleY%22%3A1%2C%22fps%22%3A6%2C%22loop%22%3A0%2C%22action%22%3A%22jump%22%2C%22frames%22%3A%5B%7B%22_1636%22%3A0%2C%22width%22%3A0%2C%22_1637%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E8%B7%B3.png%22%2C%22height%22%3A0%7D%5D%2C%22scaleX%22%3A1%7D%26%26%7B%22scaleY%22%3A1%2C%22fps%22%3A3%2C%22loop%22%3A1%2C%22action%22%3A%22trancate%22%2C%22frames%22%3A%5B%7B%22_1636%22%3Anull%2C%22width%22%3Anull%2C%22_1637%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E9%9D%99%E6%AD%A2.png%22%2C%22height%22%3Anull%7D%2C%7B%22_1636%22%3Anull%2C%22width%22%3Anull%2C%22_1637%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E8%83%9C%E5%88%A92.png%22%2C%22height%22%3Anull%7D%5D%2C%22scaleX%22%3A1%7D" valuetype="string" edittype="animation">
                   <description>%E7%82%B9%E5%87%BB%E6%8C%89%E7%BA%BD%E7%BC%96%E8%BE%91%E5%8A%A8%E7%94%BB</description>
                 </p>
               </properties>
@@ -2062,10 +2043,10 @@
                 <p key="visible" value="true" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
                 </p>
-                <p key="x" value="693.6874929414369" valuetype="number">
+                <p key="x" value="542.4086519625516" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="y" value="836.5111672917016" valuetype="number">
+                <p key="y" value="835.0881414231088" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E5%9D%90%E6%A0%87</description>
                 </p>
                 <p key="anchorX" value="0" valuetype="number">
@@ -2074,7 +2055,7 @@
                 <p key="anchorY" value="0" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="width" value="1954.6621055517046" valuetype="number">
+                <p key="width" value="1838.0560335132018" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%AE%BD%E5%BA%A6</description>
                 </p>
                 <p key="height" value="127.91665963000916" valuetype="number">
@@ -2092,10 +2073,10 @@
                 <p key="enabled" value="false" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E9%BB%98%E8%AE%A4%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81%E8%A7%A6%E6%91%B8</description>
                 </p>
-                <p key="collision" value="false" valuetype="boolean">
+                <p key="collision" value="true" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
                 </p>
-                <p key="collisionData" value="%5Bobject%20_214%5D" valuetype="string">
+                <p key="collisionData" value="0%2Fn0.00%7C127.92%2C1838.06%7C127.92%2C1838.06%7C0.00%2C0.00%7C0.00" valuetype="string" edittype="collisionData">
                   <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
                 </p>
               </properties>
@@ -2121,7 +2102,7 @@
                 <p key="visible" value="true" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
                 </p>
-                <p key="x" value="419.6223400474733" valuetype="number">
+                <p key="x" value="457.5460191336099" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
                 </p>
                 <p key="y" value="737.3539966440908" valuetype="number">
@@ -2154,7 +2135,7 @@
                 <p key="collision" value="true" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
                 </p>
-                <p key="collisionData" value="%5Bobject%20_214%5D" valuetype="string">
+                <p key="collisionData" value="0%2Fn0.00%7C200.00%2C100.00%7C200.00%2C100.00%7C0.00%2C0.00%7C0.00" valuetype="string" edittype="collisionData">
                   <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
                 </p>
               </properties>
@@ -2210,89 +2191,6 @@
                     </p>
                     <p key="height" value="1080" valuetype="number">
                       <description>%E8%AE%BE%E7%BD%AE%E9%99%90%E5%88%B6%E8%BE%B9%E7%95%8C%E7%9A%84%E9%AB%98%E3%80%82%EF%BC%88%E5%8D%95%E4%BD%8D%EF%BC%9A%E5%83%8F%E7%B4%A0%EF%BC%89</description>
-                    </p>
-                  </properties>
-                </b>
-              </behaviors>
-              <children/>
-            </object>
-            <object type="AISprite" uiname="enemy" layer="2">
-              <properties>
-                <p key="name" value="enemy" valuetype="string">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%B1%BB%E5%9E%8B%E5%90%8D%E7%A7%B0%EF%BC%8C%E8%BF%99%E4%B9%9F%E5%B0%B1%E6%98%AF%E8%AF%B4%EF%BC%8C%E5%A4%9A%E4%B8%AA%E5%AE%9E%E4%BE%8B%E5%8F%AF%E8%83%BD%E4%BC%9A%E6%9C%89%E7%9B%B8%E5%90%8C%E7%9A%84%E5%90%8D%E5%AD%97%EF%BC%8C%E8%80%8C%E5%90%8C%E4%B8%80%E7%B1%BB%E5%9E%8B%E5%AE%9E%E4%BE%8B%E4%BC%9A%E5%85%B7%E5%A4%87%E7%9B%B8%E5%90%8C%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E4%B8%8E%E8%A1%8C%E4%B8%BA</description>
-                </p>
-                <p key="uiGuid" value="2481" valuetype="string">
-                  <description>%E7%BC%96%E8%BE%91%E5%99%A8%E7%94%9F%E6%88%90%E7%9A%84%E5%94%AF%E4%B8%80id</description>
-                </p>
-                <p key="global" value="false" valuetype="boolean">
-                  <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E4%B8%BA%E5%85%A8%E5%B1%80%E5%AE%9E%E4%BE%8B%EF%BC%8C%E5%85%A8%E5%B1%80%E5%AE%9E%E4%BE%8B%E5%9C%A8%E8%B7%A8%E5%9C%BA%E6%99%AF%E5%90%8E%E4%B8%8D%E4%BC%9A%E8%A2%AB%E9%94%80%E6%AF%81%EF%BC%8C%E4%BB%8D%E7%84%B6%E4%BC%9A%E8%A2%AB%E4%BF%9D%E7%95%99%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%85%B6%E6%9C%AC%E8%BA%AB%E5%B8%A6%E7%9A%84%E6%95%B0%E6%8D%AE%E4%B9%9F%E4%BC%9A%E4%BF%9D%E7%95%99</description>
-                </p>
-                <p key="visible" value="true" valuetype="boolean">
-                  <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
-                </p>
-                <p key="x" value="744.8382194270599" valuetype="number">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
-                </p>
-                <p key="y" value="951.6336754522893" valuetype="number">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E5%9D%90%E6%A0%87</description>
-                </p>
-                <p key="anchorX" value="0.5" valuetype="number">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
-                </p>
-                <p key="anchorY" value="1" valuetype="number">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
-                </p>
-                <p key="width" value="101" valuetype="number">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%AE%BD%E5%BA%A6</description>
-                </p>
-                <p key="height" value="59.33333500267737" valuetype="number">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%AB%98%E5%BA%A6</description>
-                </p>
-                <p key="angle" value="0" valuetype="number">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E8%87%AA%E8%BA%AB%E8%A7%92%E5%BA%A6</description>
-                </p>
-                <p key="alpha" value="0" valuetype="number">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%80%8F%E6%98%8E%E5%BA%A6</description>
-                </p>
-                <p key="url" value="resource%2FuserAsset%2Fimage%2Fwhite_block.png" valuetype="string">
-                  <description>%E5%9B%BE%E7%89%87%E6%BA%90</description>
-                </p>
-                <p key="enabled" value="false" valuetype="boolean">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E9%BB%98%E8%AE%A4%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81%E8%A7%A6%E6%91%B8</description>
-                </p>
-                <p key="collision" value="true" valuetype="boolean">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
-                </p>
-                <p key="collisionData" value="%5Bobject%20_214%5D" valuetype="string">
-                  <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
-                </p>
-              </properties>
-              <customproperties>
-                <p key="n" value="0" valuetype="number"/>
-              </customproperties>
-              <behaviors>
-                <b name="计时器" type="TimerBehavior">
-                  <properties/>
-                </b>
-                <b name="子弹" type="BulletBehaivor">
-                  <properties>
-                    <p key="speed" value="800" valuetype="number">
-                      <description>%E8%AE%BE%E7%BD%AE%E5%AD%90%E5%BC%B9%E7%9A%84%E8%BF%90%E5%8A%A8%E9%80%9F%E5%BA%A6%E3%80%82%EF%BC%88%E5%8D%95%E4%BD%8D%EF%BC%9A%E5%83%8F%E7%B4%A0%2F%E7%A7%92%EF%BC%89</description>
-                    </p>
-                    <p key="acceleration" value="0" valuetype="number">
-                      <description>%E5%AD%90%E5%BC%B9%E8%BF%90%E5%8A%A8%E7%9A%84%E5%8A%A0%E9%80%9F%E5%BA%A6%EF%BC%8C%E9%BB%98%E8%AE%A4%E7%9A%84%E5%8A%A0%E9%80%9F%E5%BA%A6%E4%B8%BA%E9%9B%B6%E3%80%82%EF%BC%88%E5%8D%95%E4%BD%8D%EF%BC%9A%E5%83%8F%E7%B4%A0%2F%E7%A7%92%C2%B2%EF%BC%89</description>
-                    </p>
-                    <p key="gravity" value="0" valuetype="number">
-                      <description>%E5%AD%90%E5%BC%B9%E8%BF%90%E8%A1%8C%E4%B8%AD%E6%89%80%E6%89%BF%E5%8F%97%E7%9A%84%E5%90%91%E4%B8%8B%E7%9A%84%E9%87%8D%E5%8A%9B%EF%BC%8C%E9%BB%98%E8%AE%A4%E4%B8%BA%E9%9B%B6%E3%80%82</description>
-                    </p>
-                    <p key="angle" value="270" valuetype="number">
-                      <description>%E8%AE%BE%E7%BD%AE%E5%AD%90%E5%BC%B9%E9%BB%98%E8%AE%A4%E7%9A%84%E8%BF%90%E8%A1%8C%E8%A7%92%E5%BA%A6%E3%80%82</description>
-                    </p>
-                    <p key="bounceOffSolids" value="0" valuetype="number">
-                      <description>%E8%AE%BE%E7%BD%AE%E5%AD%90%E5%BC%B9%E4%B8%8E%E5%88%9A%E4%BD%93%E6%98%AF%E5%90%A6%E7%A2%B0%E6%92%9E%E3%80%82</description>
-                    </p>
-                    <p key="solidChangedAngle" value="1" valuetype="number">
-                      <description>%E8%AE%BE%E7%BD%AE%E4%B8%8E%E5%AD%90%E5%BC%B9%E4%B8%8E%E5%88%9A%E4%BD%93%E7%A2%B0%E6%92%9E%E5%90%8E%E6%98%AF%E5%90%A6%E6%94%B9%E5%8F%98%E5%AD%90%E5%BC%B9%E8%87%AA%E8%BA%AB%E7%9A%84%E8%A7%92%E5%BA%A6</description>
                     </p>
                   </properties>
                 </b>
@@ -2375,7 +2273,7 @@
                 <p key="x" value="71.56901043265417" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="y" value="909.9041591071581" valuetype="number">
+                <p key="y" value="909.904159107158" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E5%9D%90%E6%A0%87</description>
                 </p>
                 <p key="anchorX" value="0.5" valuetype="number">
@@ -2430,6 +2328,446 @@
           <customproperties/>
           <behaviors/>
           <children>
+            <object type="AISprite" uiname="step4" layer="1">
+              <properties>
+                <p key="name" value="step4" valuetype="string">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%B1%BB%E5%9E%8B%E5%90%8D%E7%A7%B0%EF%BC%8C%E8%BF%99%E4%B9%9F%E5%B0%B1%E6%98%AF%E8%AF%B4%EF%BC%8C%E5%A4%9A%E4%B8%AA%E5%AE%9E%E4%BE%8B%E5%8F%AF%E8%83%BD%E4%BC%9A%E6%9C%89%E7%9B%B8%E5%90%8C%E7%9A%84%E5%90%8D%E5%AD%97%EF%BC%8C%E8%80%8C%E5%90%8C%E4%B8%80%E7%B1%BB%E5%9E%8B%E5%AE%9E%E4%BE%8B%E4%BC%9A%E5%85%B7%E5%A4%87%E7%9B%B8%E5%90%8C%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E4%B8%8E%E8%A1%8C%E4%B8%BA</description>
+                </p>
+                <p key="uiGuid" value="3007" valuetype="string">
+                  <description>%E7%BC%96%E8%BE%91%E5%99%A8%E7%94%9F%E6%88%90%E7%9A%84%E5%94%AF%E4%B8%80id</description>
+                </p>
+                <p key="global" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E4%B8%BA%E5%85%A8%E5%B1%80%E5%AE%9E%E4%BE%8B%EF%BC%8C%E5%85%A8%E5%B1%80%E5%AE%9E%E4%BE%8B%E5%9C%A8%E8%B7%A8%E5%9C%BA%E6%99%AF%E5%90%8E%E4%B8%8D%E4%BC%9A%E8%A2%AB%E9%94%80%E6%AF%81%EF%BC%8C%E4%BB%8D%E7%84%B6%E4%BC%9A%E8%A2%AB%E4%BF%9D%E7%95%99%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%85%B6%E6%9C%AC%E8%BA%AB%E5%B8%A6%E7%9A%84%E6%95%B0%E6%8D%AE%E4%B9%9F%E4%BC%9A%E4%BF%9D%E7%95%99</description>
+                </p>
+                <p key="visible" value="true" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
+                </p>
+                <p key="x" value="2360.9059240826045" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="y" value="564.9773163631581" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="anchorX" value="5.727466437794101" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="anchorY" value="1.6266091460763126" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="width" value="112.3325963952575" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%AE%BD%E5%BA%A6</description>
+                </p>
+                <p key="height" value="104.89697603115332" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%AB%98%E5%BA%A6</description>
+                </p>
+                <p key="angle" value="0" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E8%87%AA%E8%BA%AB%E8%A7%92%E5%BA%A6</description>
+                </p>
+                <p key="alpha" value="1" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%80%8F%E6%98%8E%E5%BA%A6</description>
+                </p>
+                <p key="url" value="%22%22" valuetype="string">
+                  <description>%E5%9B%BE%E7%89%87%E6%BA%90</description>
+                </p>
+                <p key="enabled" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E9%BB%98%E8%AE%A4%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81%E8%A7%A6%E6%91%B8</description>
+                </p>
+                <p key="collision" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
+                </p>
+                <p key="collisionData" value="%22%22" valuetype="string">
+                  <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
+                </p>
+              </properties>
+              <customproperties/>
+              <behaviors/>
+              <children/>
+            </object>
+            <object type="AISprite" uiname="AISprite3003" layer="1">
+              <properties>
+                <p key="name" value="AISprite3003" valuetype="string">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%B1%BB%E5%9E%8B%E5%90%8D%E7%A7%B0%EF%BC%8C%E8%BF%99%E4%B9%9F%E5%B0%B1%E6%98%AF%E8%AF%B4%EF%BC%8C%E5%A4%9A%E4%B8%AA%E5%AE%9E%E4%BE%8B%E5%8F%AF%E8%83%BD%E4%BC%9A%E6%9C%89%E7%9B%B8%E5%90%8C%E7%9A%84%E5%90%8D%E5%AD%97%EF%BC%8C%E8%80%8C%E5%90%8C%E4%B8%80%E7%B1%BB%E5%9E%8B%E5%AE%9E%E4%BE%8B%E4%BC%9A%E5%85%B7%E5%A4%87%E7%9B%B8%E5%90%8C%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E4%B8%8E%E8%A1%8C%E4%B8%BA</description>
+                </p>
+                <p key="uiGuid" value="3004" valuetype="string">
+                  <description>%E7%BC%96%E8%BE%91%E5%99%A8%E7%94%9F%E6%88%90%E7%9A%84%E5%94%AF%E4%B8%80id</description>
+                </p>
+                <p key="global" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E4%B8%BA%E5%85%A8%E5%B1%80%E5%AE%9E%E4%BE%8B%EF%BC%8C%E5%85%A8%E5%B1%80%E5%AE%9E%E4%BE%8B%E5%9C%A8%E8%B7%A8%E5%9C%BA%E6%99%AF%E5%90%8E%E4%B8%8D%E4%BC%9A%E8%A2%AB%E9%94%80%E6%AF%81%EF%BC%8C%E4%BB%8D%E7%84%B6%E4%BC%9A%E8%A2%AB%E4%BF%9D%E7%95%99%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%85%B6%E6%9C%AC%E8%BA%AB%E5%B8%A6%E7%9A%84%E6%95%B0%E6%8D%AE%E4%B9%9F%E4%BC%9A%E4%BF%9D%E7%95%99</description>
+                </p>
+                <p key="visible" value="true" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
+                </p>
+                <p key="x" value="1600.8" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="y" value="-103.45" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="anchorX" value="0.5" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="anchorY" value="0.5" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="width" value="30" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%AE%BD%E5%BA%A6</description>
+                </p>
+                <p key="height" value="30" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%AB%98%E5%BA%A6</description>
+                </p>
+                <p key="angle" value="0" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E8%87%AA%E8%BA%AB%E8%A7%92%E5%BA%A6</description>
+                </p>
+                <p key="alpha" value="1" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%80%8F%E6%98%8E%E5%BA%A6</description>
+                </p>
+                <p key="url" value="%22%22" valuetype="string">
+                  <description>%E5%9B%BE%E7%89%87%E6%BA%90</description>
+                </p>
+                <p key="enabled" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E9%BB%98%E8%AE%A4%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81%E8%A7%A6%E6%91%B8</description>
+                </p>
+                <p key="collision" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
+                </p>
+                <p key="collisionData" value="%22%22" valuetype="string">
+                  <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
+                </p>
+              </properties>
+              <customproperties/>
+              <behaviors/>
+              <children/>
+            </object>
+            <object type="AISprite" uiname="AISprite3000" layer="1">
+              <properties>
+                <p key="name" value="AISprite3000" valuetype="string">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%B1%BB%E5%9E%8B%E5%90%8D%E7%A7%B0%EF%BC%8C%E8%BF%99%E4%B9%9F%E5%B0%B1%E6%98%AF%E8%AF%B4%EF%BC%8C%E5%A4%9A%E4%B8%AA%E5%AE%9E%E4%BE%8B%E5%8F%AF%E8%83%BD%E4%BC%9A%E6%9C%89%E7%9B%B8%E5%90%8C%E7%9A%84%E5%90%8D%E5%AD%97%EF%BC%8C%E8%80%8C%E5%90%8C%E4%B8%80%E7%B1%BB%E5%9E%8B%E5%AE%9E%E4%BE%8B%E4%BC%9A%E5%85%B7%E5%A4%87%E7%9B%B8%E5%90%8C%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E4%B8%8E%E8%A1%8C%E4%B8%BA</description>
+                </p>
+                <p key="uiGuid" value="3001" valuetype="string">
+                  <description>%E7%BC%96%E8%BE%91%E5%99%A8%E7%94%9F%E6%88%90%E7%9A%84%E5%94%AF%E4%B8%80id</description>
+                </p>
+                <p key="global" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E4%B8%BA%E5%85%A8%E5%B1%80%E5%AE%9E%E4%BE%8B%EF%BC%8C%E5%85%A8%E5%B1%80%E5%AE%9E%E4%BE%8B%E5%9C%A8%E8%B7%A8%E5%9C%BA%E6%99%AF%E5%90%8E%E4%B8%8D%E4%BC%9A%E8%A2%AB%E9%94%80%E6%AF%81%EF%BC%8C%E4%BB%8D%E7%84%B6%E4%BC%9A%E8%A2%AB%E4%BF%9D%E7%95%99%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%85%B6%E6%9C%AC%E8%BA%AB%E5%B8%A6%E7%9A%84%E6%95%B0%E6%8D%AE%E4%B9%9F%E4%BC%9A%E4%BF%9D%E7%95%99</description>
+                </p>
+                <p key="visible" value="true" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
+                </p>
+                <p key="x" value="1603.55" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="y" value="-203.45" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="anchorX" value="0.5" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="anchorY" value="0.5" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="width" value="30" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%AE%BD%E5%BA%A6</description>
+                </p>
+                <p key="height" value="30" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%AB%98%E5%BA%A6</description>
+                </p>
+                <p key="angle" value="0" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E8%87%AA%E8%BA%AB%E8%A7%92%E5%BA%A6</description>
+                </p>
+                <p key="alpha" value="1" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%80%8F%E6%98%8E%E5%BA%A6</description>
+                </p>
+                <p key="url" value="%22%22" valuetype="string">
+                  <description>%E5%9B%BE%E7%89%87%E6%BA%90</description>
+                </p>
+                <p key="enabled" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E9%BB%98%E8%AE%A4%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81%E8%A7%A6%E6%91%B8</description>
+                </p>
+                <p key="collision" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
+                </p>
+                <p key="collisionData" value="%22%22" valuetype="string">
+                  <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
+                </p>
+              </properties>
+              <customproperties/>
+              <behaviors/>
+              <children/>
+            </object>
+            <object type="AISprite" uiname="AISprite2997" layer="1">
+              <properties>
+                <p key="name" value="AISprite2997" valuetype="string">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%B1%BB%E5%9E%8B%E5%90%8D%E7%A7%B0%EF%BC%8C%E8%BF%99%E4%B9%9F%E5%B0%B1%E6%98%AF%E8%AF%B4%EF%BC%8C%E5%A4%9A%E4%B8%AA%E5%AE%9E%E4%BE%8B%E5%8F%AF%E8%83%BD%E4%BC%9A%E6%9C%89%E7%9B%B8%E5%90%8C%E7%9A%84%E5%90%8D%E5%AD%97%EF%BC%8C%E8%80%8C%E5%90%8C%E4%B8%80%E7%B1%BB%E5%9E%8B%E5%AE%9E%E4%BE%8B%E4%BC%9A%E5%85%B7%E5%A4%87%E7%9B%B8%E5%90%8C%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E4%B8%8E%E8%A1%8C%E4%B8%BA</description>
+                </p>
+                <p key="uiGuid" value="2998" valuetype="string">
+                  <description>%E7%BC%96%E8%BE%91%E5%99%A8%E7%94%9F%E6%88%90%E7%9A%84%E5%94%AF%E4%B8%80id</description>
+                </p>
+                <p key="global" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E4%B8%BA%E5%85%A8%E5%B1%80%E5%AE%9E%E4%BE%8B%EF%BC%8C%E5%85%A8%E5%B1%80%E5%AE%9E%E4%BE%8B%E5%9C%A8%E8%B7%A8%E5%9C%BA%E6%99%AF%E5%90%8E%E4%B8%8D%E4%BC%9A%E8%A2%AB%E9%94%80%E6%AF%81%EF%BC%8C%E4%BB%8D%E7%84%B6%E4%BC%9A%E8%A2%AB%E4%BF%9D%E7%95%99%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%85%B6%E6%9C%AC%E8%BA%AB%E5%B8%A6%E7%9A%84%E6%95%B0%E6%8D%AE%E4%B9%9F%E4%BC%9A%E4%BF%9D%E7%95%99</description>
+                </p>
+                <p key="visible" value="true" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
+                </p>
+                <p key="x" value="1475.1" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="y" value="-180.5" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="anchorX" value="0.5" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="anchorY" value="0.5" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="width" value="30" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%AE%BD%E5%BA%A6</description>
+                </p>
+                <p key="height" value="30" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%AB%98%E5%BA%A6</description>
+                </p>
+                <p key="angle" value="0" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E8%87%AA%E8%BA%AB%E8%A7%92%E5%BA%A6</description>
+                </p>
+                <p key="alpha" value="1" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%80%8F%E6%98%8E%E5%BA%A6</description>
+                </p>
+                <p key="url" value="%22%22" valuetype="string">
+                  <description>%E5%9B%BE%E7%89%87%E6%BA%90</description>
+                </p>
+                <p key="enabled" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E9%BB%98%E8%AE%A4%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81%E8%A7%A6%E6%91%B8</description>
+                </p>
+                <p key="collision" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
+                </p>
+                <p key="collisionData" value="%22%22" valuetype="string">
+                  <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
+                </p>
+              </properties>
+              <customproperties/>
+              <behaviors/>
+              <children/>
+            </object>
+            <object type="AISprite" uiname="AISprite2994" layer="1">
+              <properties>
+                <p key="name" value="AISprite2994" valuetype="string">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%B1%BB%E5%9E%8B%E5%90%8D%E7%A7%B0%EF%BC%8C%E8%BF%99%E4%B9%9F%E5%B0%B1%E6%98%AF%E8%AF%B4%EF%BC%8C%E5%A4%9A%E4%B8%AA%E5%AE%9E%E4%BE%8B%E5%8F%AF%E8%83%BD%E4%BC%9A%E6%9C%89%E7%9B%B8%E5%90%8C%E7%9A%84%E5%90%8D%E5%AD%97%EF%BC%8C%E8%80%8C%E5%90%8C%E4%B8%80%E7%B1%BB%E5%9E%8B%E5%AE%9E%E4%BE%8B%E4%BC%9A%E5%85%B7%E5%A4%87%E7%9B%B8%E5%90%8C%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E4%B8%8E%E8%A1%8C%E4%B8%BA</description>
+                </p>
+                <p key="uiGuid" value="2995" valuetype="string">
+                  <description>%E7%BC%96%E8%BE%91%E5%99%A8%E7%94%9F%E6%88%90%E7%9A%84%E5%94%AF%E4%B8%80id</description>
+                </p>
+                <p key="global" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E4%B8%BA%E5%85%A8%E5%B1%80%E5%AE%9E%E4%BE%8B%EF%BC%8C%E5%85%A8%E5%B1%80%E5%AE%9E%E4%BE%8B%E5%9C%A8%E8%B7%A8%E5%9C%BA%E6%99%AF%E5%90%8E%E4%B8%8D%E4%BC%9A%E8%A2%AB%E9%94%80%E6%AF%81%EF%BC%8C%E4%BB%8D%E7%84%B6%E4%BC%9A%E8%A2%AB%E4%BF%9D%E7%95%99%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%85%B6%E6%9C%AC%E8%BA%AB%E5%B8%A6%E7%9A%84%E6%95%B0%E6%8D%AE%E4%B9%9F%E4%BC%9A%E4%BF%9D%E7%95%99</description>
+                </p>
+                <p key="visible" value="true" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
+                </p>
+                <p key="x" value="1335.85" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="y" value="-176.45" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="anchorX" value="0.5" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="anchorY" value="0.5" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="width" value="30" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%AE%BD%E5%BA%A6</description>
+                </p>
+                <p key="height" value="30" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%AB%98%E5%BA%A6</description>
+                </p>
+                <p key="angle" value="0" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E8%87%AA%E8%BA%AB%E8%A7%92%E5%BA%A6</description>
+                </p>
+                <p key="alpha" value="1" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%80%8F%E6%98%8E%E5%BA%A6</description>
+                </p>
+                <p key="url" value="%22%22" valuetype="string">
+                  <description>%E5%9B%BE%E7%89%87%E6%BA%90</description>
+                </p>
+                <p key="enabled" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E9%BB%98%E8%AE%A4%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81%E8%A7%A6%E6%91%B8</description>
+                </p>
+                <p key="collision" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
+                </p>
+                <p key="collisionData" value="%22%22" valuetype="string">
+                  <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
+                </p>
+              </properties>
+              <customproperties/>
+              <behaviors/>
+              <children/>
+            </object>
+            <object type="AISprite" uiname="step3" layer="1">
+              <properties>
+                <p key="name" value="step3" valuetype="string">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%B1%BB%E5%9E%8B%E5%90%8D%E7%A7%B0%EF%BC%8C%E8%BF%99%E4%B9%9F%E5%B0%B1%E6%98%AF%E8%AF%B4%EF%BC%8C%E5%A4%9A%E4%B8%AA%E5%AE%9E%E4%BE%8B%E5%8F%AF%E8%83%BD%E4%BC%9A%E6%9C%89%E7%9B%B8%E5%90%8C%E7%9A%84%E5%90%8D%E5%AD%97%EF%BC%8C%E8%80%8C%E5%90%8C%E4%B8%80%E7%B1%BB%E5%9E%8B%E5%AE%9E%E4%BE%8B%E4%BC%9A%E5%85%B7%E5%A4%87%E7%9B%B8%E5%90%8C%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E4%B8%8E%E8%A1%8C%E4%B8%BA</description>
+                </p>
+                <p key="uiGuid" value="2992" valuetype="string">
+                  <description>%E7%BC%96%E8%BE%91%E5%99%A8%E7%94%9F%E6%88%90%E7%9A%84%E5%94%AF%E4%B8%80id</description>
+                </p>
+                <p key="global" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E4%B8%BA%E5%85%A8%E5%B1%80%E5%AE%9E%E4%BE%8B%EF%BC%8C%E5%85%A8%E5%B1%80%E5%AE%9E%E4%BE%8B%E5%9C%A8%E8%B7%A8%E5%9C%BA%E6%99%AF%E5%90%8E%E4%B8%8D%E4%BC%9A%E8%A2%AB%E9%94%80%E6%AF%81%EF%BC%8C%E4%BB%8D%E7%84%B6%E4%BC%9A%E8%A2%AB%E4%BF%9D%E7%95%99%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%85%B6%E6%9C%AC%E8%BA%AB%E5%B8%A6%E7%9A%84%E6%95%B0%E6%8D%AE%E4%B9%9F%E4%BC%9A%E4%BF%9D%E7%95%99</description>
+                </p>
+                <p key="visible" value="true" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
+                </p>
+                <p key="x" value="1452.005900730607" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="y" value="200.48091661833996" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="anchorX" value="0.4284288665156979" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="anchorY" value="0.4083450000211634" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="width" value="100.72191357375853" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%AE%BD%E5%BA%A6</description>
+                </p>
+                <p key="height" value="104.5960077858551" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%AB%98%E5%BA%A6</description>
+                </p>
+                <p key="angle" value="0.537966325593942" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E8%87%AA%E8%BA%AB%E8%A7%92%E5%BA%A6</description>
+                </p>
+                <p key="alpha" value="1" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%80%8F%E6%98%8E%E5%BA%A6</description>
+                </p>
+                <p key="url" value="%22%22" valuetype="string">
+                  <description>%E5%9B%BE%E7%89%87%E6%BA%90</description>
+                </p>
+                <p key="enabled" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E9%BB%98%E8%AE%A4%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81%E8%A7%A6%E6%91%B8</description>
+                </p>
+                <p key="collision" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
+                </p>
+                <p key="collisionData" value="%22%22" valuetype="string">
+                  <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
+                </p>
+              </properties>
+              <customproperties/>
+              <behaviors/>
+              <children/>
+            </object>
+            <object type="AISprite" uiname="step2" layer="1">
+              <properties>
+                <p key="name" value="step2" valuetype="string">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%B1%BB%E5%9E%8B%E5%90%8D%E7%A7%B0%EF%BC%8C%E8%BF%99%E4%B9%9F%E5%B0%B1%E6%98%AF%E8%AF%B4%EF%BC%8C%E5%A4%9A%E4%B8%AA%E5%AE%9E%E4%BE%8B%E5%8F%AF%E8%83%BD%E4%BC%9A%E6%9C%89%E7%9B%B8%E5%90%8C%E7%9A%84%E5%90%8D%E5%AD%97%EF%BC%8C%E8%80%8C%E5%90%8C%E4%B8%80%E7%B1%BB%E5%9E%8B%E5%AE%9E%E4%BE%8B%E4%BC%9A%E5%85%B7%E5%A4%87%E7%9B%B8%E5%90%8C%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E4%B8%8E%E8%A1%8C%E4%B8%BA</description>
+                </p>
+                <p key="uiGuid" value="2989" valuetype="string">
+                  <description>%E7%BC%96%E8%BE%91%E5%99%A8%E7%94%9F%E6%88%90%E7%9A%84%E5%94%AF%E4%B8%80id</description>
+                </p>
+                <p key="global" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E4%B8%BA%E5%85%A8%E5%B1%80%E5%AE%9E%E4%BE%8B%EF%BC%8C%E5%85%A8%E5%B1%80%E5%AE%9E%E4%BE%8B%E5%9C%A8%E8%B7%A8%E5%9C%BA%E6%99%AF%E5%90%8E%E4%B8%8D%E4%BC%9A%E8%A2%AB%E9%94%80%E6%AF%81%EF%BC%8C%E4%BB%8D%E7%84%B6%E4%BC%9A%E8%A2%AB%E4%BF%9D%E7%95%99%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%85%B6%E6%9C%AC%E8%BA%AB%E5%B8%A6%E7%9A%84%E6%95%B0%E6%8D%AE%E4%B9%9F%E4%BC%9A%E4%BF%9D%E7%95%99</description>
+                </p>
+                <p key="visible" value="true" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
+                </p>
+                <p key="x" value="1039.383169869558" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="y" value="154.66860309386186" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="anchorX" value="0.4797359911116804" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="anchorY" value="0.5607797229306947" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="width" value="109.6287344446738" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%AE%BD%E5%BA%A6</description>
+                </p>
+                <p key="height" value="108.41199656691163" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%AB%98%E5%BA%A6</description>
+                </p>
+                <p key="angle" value="0" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E8%87%AA%E8%BA%AB%E8%A7%92%E5%BA%A6</description>
+                </p>
+                <p key="alpha" value="1" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%80%8F%E6%98%8E%E5%BA%A6</description>
+                </p>
+                <p key="url" value="%22%22" valuetype="string">
+                  <description>%E5%9B%BE%E7%89%87%E6%BA%90</description>
+                </p>
+                <p key="enabled" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E9%BB%98%E8%AE%A4%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81%E8%A7%A6%E6%91%B8</description>
+                </p>
+                <p key="collision" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
+                </p>
+                <p key="collisionData" value="%22%22" valuetype="string">
+                  <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
+                </p>
+              </properties>
+              <customproperties/>
+              <behaviors/>
+              <children/>
+            </object>
+            <object type="AISprite" uiname="step1" layer="1">
+              <properties>
+                <p key="name" value="step1" valuetype="string">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%B1%BB%E5%9E%8B%E5%90%8D%E7%A7%B0%EF%BC%8C%E8%BF%99%E4%B9%9F%E5%B0%B1%E6%98%AF%E8%AF%B4%EF%BC%8C%E5%A4%9A%E4%B8%AA%E5%AE%9E%E4%BE%8B%E5%8F%AF%E8%83%BD%E4%BC%9A%E6%9C%89%E7%9B%B8%E5%90%8C%E7%9A%84%E5%90%8D%E5%AD%97%EF%BC%8C%E8%80%8C%E5%90%8C%E4%B8%80%E7%B1%BB%E5%9E%8B%E5%AE%9E%E4%BE%8B%E4%BC%9A%E5%85%B7%E5%A4%87%E7%9B%B8%E5%90%8C%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E4%B8%8E%E8%A1%8C%E4%B8%BA</description>
+                </p>
+                <p key="uiGuid" value="2986" valuetype="string">
+                  <description>%E7%BC%96%E8%BE%91%E5%99%A8%E7%94%9F%E6%88%90%E7%9A%84%E5%94%AF%E4%B8%80id</description>
+                </p>
+                <p key="global" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E4%B8%BA%E5%85%A8%E5%B1%80%E5%AE%9E%E4%BE%8B%EF%BC%8C%E5%85%A8%E5%B1%80%E5%AE%9E%E4%BE%8B%E5%9C%A8%E8%B7%A8%E5%9C%BA%E6%99%AF%E5%90%8E%E4%B8%8D%E4%BC%9A%E8%A2%AB%E9%94%80%E6%AF%81%EF%BC%8C%E4%BB%8D%E7%84%B6%E4%BC%9A%E8%A2%AB%E4%BF%9D%E7%95%99%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%85%B6%E6%9C%AC%E8%BA%AB%E5%B8%A6%E7%9A%84%E6%95%B0%E6%8D%AE%E4%B9%9F%E4%BC%9A%E4%BF%9D%E7%95%99</description>
+                </p>
+                <p key="visible" value="true" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
+                </p>
+                <p key="x" value="359.8221757207272" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="y" value="1409.3070928641455" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="anchorX" value="-2.5598704407432704" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="anchorY" value="11.202786887724987" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="width" value="124.49997517288148" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%AE%BD%E5%BA%A6</description>
+                </p>
+                <p key="height" value="106.92487249409066" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%AB%98%E5%BA%A6</description>
+                </p>
+                <p key="angle" value="0" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E8%87%AA%E8%BA%AB%E8%A7%92%E5%BA%A6</description>
+                </p>
+                <p key="alpha" value="1" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%80%8F%E6%98%8E%E5%BA%A6</description>
+                </p>
+                <p key="url" value="%22%22" valuetype="string">
+                  <description>%E5%9B%BE%E7%89%87%E6%BA%90</description>
+                </p>
+                <p key="enabled" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E9%BB%98%E8%AE%A4%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81%E8%A7%A6%E6%91%B8</description>
+                </p>
+                <p key="collision" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
+                </p>
+                <p key="collisionData" value="%22%22" valuetype="string">
+                  <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
+                </p>
+              </properties>
+              <customproperties/>
+              <behaviors/>
+              <children/>
+            </object>
             <object type="AITiledBackground" uiname="AITiledBackground2547" layer="1">
               <properties>
                 <p key="name" value="AITiledBackground2547" valuetype="string">
@@ -2444,10 +2782,10 @@
                 <p key="visible" value="true" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
                 </p>
-                <p key="x" value="1450.6432015739401" valuetype="number">
+                <p key="x" value="1548.706790914643" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="y" value="923.7030632655759" valuetype="number">
+                <p key="y" value="911.0616091692206" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E5%9D%90%E6%A0%87</description>
                 </p>
                 <p key="anchorX" value="0.5" valuetype="number">
@@ -2459,7 +2797,7 @@
                 <p key="width" value="3142.79996894005" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%AE%BD%E5%BA%A6</description>
                 </p>
-                <p key="height" value="339.89372212090905" valuetype="number">
+                <p key="height" value="361.5691142583254" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%AB%98%E5%BA%A6</description>
                 </p>
                 <p key="angle" value="0" valuetype="number">
@@ -2477,12 +2815,85 @@
                 <p key="collision" value="false" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
                 </p>
-                <p key="collisionData" value="%5Bobject%20_214%5D" valuetype="string">
+                <p key="collisionData" value="0%2Fn0.00%7C361.57%2C3142.80%7C361.57%2C3142.80%7C0.00%2C926.85%7C85.20%2C868.15%7C56.65%2C799.60%7C170.55%2C740.25%7C175.45%2C660.55%7C123.55%2C643.30%7C184.15%2C290.70%7C123.60%2C314.40%7C17.45%2C232.95%7C-4.80%2C193.70%7C112.05%2C-0.55%7C135.50" valuetype="string" edittype="collisionData">
                   <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
                 </p>
               </properties>
               <customproperties/>
               <behaviors/>
+              <children/>
+            </object>
+            <object type="AIMovieClip" uiname="毒草蘑菇" layer="1">
+              <properties>
+                <p key="name" value="%E6%AF%92%E8%8D%89%E8%98%91%E8%8F%87" valuetype="string">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%B1%BB%E5%9E%8B%E5%90%8D%E7%A7%B0%EF%BC%8C%E8%BF%99%E4%B9%9F%E5%B0%B1%E6%98%AF%E8%AF%B4%EF%BC%8C%E5%A4%9A%E4%B8%AA%E5%AE%9E%E4%BE%8B%E5%8F%AF%E8%83%BD%E4%BC%9A%E6%9C%89%E7%9B%B8%E5%90%8C%E7%9A%84%E5%90%8D%E5%AD%97%EF%BC%8C%E8%80%8C%E5%90%8C%E4%B8%80%E7%B1%BB%E5%9E%8B%E5%AE%9E%E4%BE%8B%E4%BC%9A%E5%85%B7%E5%A4%87%E7%9B%B8%E5%90%8C%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E4%B8%8E%E8%A1%8C%E4%B8%BA</description>
+                </p>
+                <p key="uiGuid" value="2983" valuetype="string">
+                  <description>%E7%BC%96%E8%BE%91%E5%99%A8%E7%94%9F%E6%88%90%E7%9A%84%E5%94%AF%E4%B8%80id</description>
+                </p>
+                <p key="global" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E4%B8%BA%E5%85%A8%E5%B1%80%E5%AE%9E%E4%BE%8B%EF%BC%8C%E5%85%A8%E5%B1%80%E5%AE%9E%E4%BE%8B%E5%9C%A8%E8%B7%A8%E5%9C%BA%E6%99%AF%E5%90%8E%E4%B8%8D%E4%BC%9A%E8%A2%AB%E9%94%80%E6%AF%81%EF%BC%8C%E4%BB%8D%E7%84%B6%E4%BC%9A%E8%A2%AB%E4%BF%9D%E7%95%99%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%85%B6%E6%9C%AC%E8%BA%AB%E5%B8%A6%E7%9A%84%E6%95%B0%E6%8D%AE%E4%B9%9F%E4%BC%9A%E4%BF%9D%E7%95%99</description>
+                </p>
+                <p key="visible" value="true" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
+                </p>
+                <p key="x" value="1495.28963956831" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="y" value="852.4802450069948" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="anchorX" value="0.5" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="anchorY" value="0.5" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
+                </p>
+                <p key="width" value="99.88408881209898" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%AE%BD%E5%BA%A6</description>
+                </p>
+                <p key="height" value="137.20749131609978" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%AB%98%E5%BA%A6</description>
+                </p>
+                <p key="angle" value="0" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E8%87%AA%E8%BA%AB%E8%A7%92%E5%BA%A6</description>
+                </p>
+                <p key="alpha" value="1" valuetype="number">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%80%8F%E6%98%8E%E5%BA%A6</description>
+                </p>
+                <p key="enabled" value="false" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E9%BB%98%E8%AE%A4%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81%E8%A7%A6%E6%91%B8</description>
+                </p>
+                <p key="collision" value="true" valuetype="boolean">
+                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
+                </p>
+                <p key="collisionData" value="0%2Fn0.00%7C137.21%2C99.88%7C137.21%2C99.88%7C0.00%2C0.00%7C0.00" valuetype="string" edittype="collisionData">
+                  <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
+                </p>
+                <p key="actions" value="%7B%22scaleY%22%3A1%2C%22fps%22%3A6%2C%22loop%22%3A0%2C%22action%22%3A%22silent%22%2C%22frames%22%3A%5B%7B%22_1636%22%3Anull%2C%22width%22%3Anull%2C%22_1637%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E8%98%91%E8%8F%87%E8%8A%B1.png%22%2C%22height%22%3Anull%7D%5D%2C%22scaleX%22%3A1%7D%26%26%7B%22scaleY%22%3A1%2C%22fps%22%3A3%2C%22loop%22%3A1%2C%22action%22%3A%22yeah%22%2C%22frames%22%3A%5B%7B%22_1636%22%3Anull%2C%22width%22%3Anull%2C%22_1637%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E8%98%91%E8%8F%87%E8%8A%B1.png%22%2C%22height%22%3Anull%7D%2C%7B%22_1636%22%3Anull%2C%22width%22%3Anull%2C%22_1637%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E6%AF%92%E8%98%91%E8%8F%87.png%22%2C%22height%22%3Anull%7D%2C%7B%22_1636%22%3Anull%2C%22width%22%3Anull%2C%22_1637%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E6%AF%92%E8%98%91%E8%8F%87.png%22%2C%22height%22%3Anull%7D%2C%7B%22_1636%22%3Anull%2C%22width%22%3Anull%2C%22_1637%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E6%AF%92%E8%98%91%E8%8F%87.png%22%2C%22height%22%3Anull%7D%5D%2C%22scaleX%22%3A1%7D" valuetype="string" edittype="animation">
+                  <description>%E7%82%B9%E5%87%BB%E6%8C%89%E7%BA%BD%E7%BC%96%E8%BE%91%E5%8A%A8%E7%94%BB</description>
+                </p>
+              </properties>
+              <customproperties/>
+              <behaviors>
+                <b name="拖拽" type="DragDropBehaivor">
+                  <properties>
+                    <p key="axes" value="0" valuetype="number">
+                      <description>%E5%85%81%E8%AE%B8%E6%8B%96%E6%8B%BD%E7%9A%84%E6%96%B9%E5%90%91%E3%80%82</description>
+                    </p>
+                    <p key="enabled" value="1" valuetype="number">
+                      <description>%E8%AE%BE%E7%BD%AE%E6%8B%96%E6%8B%BD%E5%9C%A8%E6%B8%B8%E6%88%8F%E5%88%9D%E5%A7%8B%E5%8C%96%E6%97%B6%E6%98%AF%E5%90%A6%E5%8F%AF%E7%94%A8%E3%80%82</description>
+                    </p>
+                  </properties>
+                </b>
+                <b name="节点移动" type="NodeMovingBehavior">
+                  <properties>
+                    <p key="moveSpeed" value="60" valuetype="number">
+                      <description>%E7%A7%BB%E5%8A%A8%E7%9A%84%E9%80%9F%E5%BA%A6%E3%80%82%EF%BC%88%E5%8D%95%E4%BD%8D%EF%BC%9A%E5%83%8F%E7%B4%A0%2F%E7%A7%92%EF%BC%89%E3%80%82</description>
+                    </p>
+                  </properties>
+                </b>
+              </behaviors>
               <children/>
             </object>
           </children>
@@ -2502,61 +2913,6 @@
           <customproperties/>
           <behaviors/>
           <children>
-            <object type="AITiledBackground" uiname="AITiledBackground2959" layer="0">
-              <properties>
-                <p key="name" value="AITiledBackground2959" valuetype="string">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%B1%BB%E5%9E%8B%E5%90%8D%E7%A7%B0%EF%BC%8C%E8%BF%99%E4%B9%9F%E5%B0%B1%E6%98%AF%E8%AF%B4%EF%BC%8C%E5%A4%9A%E4%B8%AA%E5%AE%9E%E4%BE%8B%E5%8F%AF%E8%83%BD%E4%BC%9A%E6%9C%89%E7%9B%B8%E5%90%8C%E7%9A%84%E5%90%8D%E5%AD%97%EF%BC%8C%E8%80%8C%E5%90%8C%E4%B8%80%E7%B1%BB%E5%9E%8B%E5%AE%9E%E4%BE%8B%E4%BC%9A%E5%85%B7%E5%A4%87%E7%9B%B8%E5%90%8C%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E4%B8%8E%E8%A1%8C%E4%B8%BA</description>
-                </p>
-                <p key="uiGuid" value="2960" valuetype="string">
-                  <description>%E7%BC%96%E8%BE%91%E5%99%A8%E7%94%9F%E6%88%90%E7%9A%84%E5%94%AF%E4%B8%80id</description>
-                </p>
-                <p key="global" value="false" valuetype="boolean">
-                  <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E4%B8%BA%E5%85%A8%E5%B1%80%E5%AE%9E%E4%BE%8B%EF%BC%8C%E5%85%A8%E5%B1%80%E5%AE%9E%E4%BE%8B%E5%9C%A8%E8%B7%A8%E5%9C%BA%E6%99%AF%E5%90%8E%E4%B8%8D%E4%BC%9A%E8%A2%AB%E9%94%80%E6%AF%81%EF%BC%8C%E4%BB%8D%E7%84%B6%E4%BC%9A%E8%A2%AB%E4%BF%9D%E7%95%99%EF%BC%8C%E5%B9%B6%E4%B8%94%E5%85%B6%E6%9C%AC%E8%BA%AB%E5%B8%A6%E7%9A%84%E6%95%B0%E6%8D%AE%E4%B9%9F%E4%BC%9A%E4%BF%9D%E7%95%99</description>
-                </p>
-                <p key="visible" value="true" valuetype="boolean">
-                  <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
-                </p>
-                <p key="x" value="1243.24" valuetype="number">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
-                </p>
-                <p key="y" value="-112.49454950289885" valuetype="number">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E5%9D%90%E6%A0%87</description>
-                </p>
-                <p key="anchorX" value="0" valuetype="number">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
-                </p>
-                <p key="anchorY" value="0" valuetype="number">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
-                </p>
-                <p key="width" value="2500" valuetype="number">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%AE%BD%E5%BA%A6</description>
-                </p>
-                <p key="height" value="15.68" valuetype="number">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%AB%98%E5%BA%A6</description>
-                </p>
-                <p key="angle" value="0" valuetype="number">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E8%87%AA%E8%BA%AB%E8%A7%92%E5%BA%A6</description>
-                </p>
-                <p key="alpha" value="1" valuetype="number">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%80%8F%E6%98%8E%E5%BA%A6</description>
-                </p>
-                <p key="url" value="resource%2FuserAsset%2Fimage%2Fblue_grass.png" valuetype="string">
-                  <description>%E5%9B%BE%E7%89%87%E6%BA%90</description>
-                </p>
-                <p key="enabled" value="false" valuetype="boolean">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E9%BB%98%E8%AE%A4%E6%98%AF%E5%90%A6%E6%94%AF%E6%8C%81%E8%A7%A6%E6%91%B8</description>
-                </p>
-                <p key="collision" value="false" valuetype="boolean">
-                  <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
-                </p>
-                <p key="collisionData" value="%5Bobject%20_214%5D" valuetype="string">
-                  <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
-                </p>
-              </properties>
-              <customproperties/>
-              <behaviors/>
-              <children/>
-            </object>
             <object type="AITiledBackground" uiname="AITiledBackground2549" layer="0">
               <properties>
                 <p key="name" value="%E9%A3%9E%E7%A0%96" valuetype="string">
@@ -2571,10 +2927,10 @@
                 <p key="visible" value="true" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
                 </p>
-                <p key="x" value="-1.2037028837808066" valuetype="number">
+                <p key="x" value="-23.31553313989309" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="y" value="-110.41875425143382" valuetype="number">
+                <p key="y" value="-22.568730219300846" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E5%9D%90%E6%A0%87</description>
                 </p>
                 <p key="anchorX" value="0" valuetype="number">
@@ -2583,13 +2939,13 @@
                 <p key="anchorY" value="0" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="width" value="2500" valuetype="number">
+                <p key="width" value="2550.914596635769" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%AE%BD%E5%BA%A6</description>
                 </p>
-                <p key="height" value="2048" valuetype="number">
+                <p key="height" value="1323.4534460897603" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%AB%98%E5%BA%A6</description>
                 </p>
-                <p key="angle" value="0" valuetype="number">
+                <p key="angle" value="359.73537919012966" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E8%87%AA%E8%BA%AB%E8%A7%92%E5%BA%A6</description>
                 </p>
                 <p key="alpha" value="1" valuetype="number">

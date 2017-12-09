@@ -2,24 +2,17 @@
 <eventSheets layout="supermario" previous="" next="" version="2.2">
   <item type="instance" UID="2954"/>
   <item type="instance" UID="2944"/>
-  <item type="instance" UID="2980"/>
-  <item type="instance" UID="2977"/>
-  <item type="instance" UID="2975">
+  <item type="instance" UID="2977">
     <item type="behavior" behaviorType="SolidBehaivor" name="刚体"/>
-    <item type="behavior" behaviorType="SinBehavior" name="曲线">
-      <item valueDataType="number" value="0" name="active"/>
-      <item valueDataType="number" value="1" name="movement"/>
-      <item valueDataType="number" value="0" name="wave"/>
-      <item valueDataType="number" value="1" name="period"/>
-      <item valueDataType="number" value="0" name="periodRandom"/>
-      <item valueDataType="number" value="0" name="periodOffset"/>
-      <item valueDataType="number" value="0" name="periodOffsetRandom"/>
-      <item valueDataType="number" value="50" name="magnitude"/>
-      <item valueDataType="number" value="0" name="magnitudeRandom"/>
+    <item type="behavior" behaviorType="NodeMovingBehavior" name="节点移动">
+      <item valueDataType="number" value="60" name="moveSpeed"/>
     </item>
   </item>
+  <item type="instance" UID="2975">
+    <item type="behavior" behaviorType="SolidBehaivor" name="刚体"/>
+  </item>
   <item type="instance" UID="2972">
-    <item type="behavior" behaviorType="JumpthruBehavior" name="跳穿"/>
+    <item type="behavior" behaviorType="SolidBehaivor" name="刚体"/>
   </item>
   <item type="instance" UID="2963"/>
   <item type="instance" UID="2957">
@@ -67,24 +60,28 @@
       <item valueDataType="number" value="1080" name="height"/>
     </item>
   </item>
-  <item type="instance" UID="2481">
-    <item initValue="0" variableType="number" variableName="n" type="variable"/>
-    <item type="behavior" behaviorType="TimerBehavior" name="计时器"/>
-    <item type="behavior" behaviorType="BulletBehaivor" name="子弹">
-      <item valueDataType="number" value="800" name="speed"/>
-      <item valueDataType="number" value="0" name="acceleration"/>
-      <item valueDataType="number" value="0" name="gravity"/>
-      <item valueDataType="number" value="270" name="angle"/>
-      <item valueDataType="number" value="0" name="bounceOffSolids"/>
-      <item valueDataType="number" value="1" name="solidChangedAngle"/>
-    </item>
-  </item>
   <item type="instance" UID="2526">
     <item type="behavior" behaviorType="SolidBehaivor" name="刚体"/>
   </item>
   <item type="instance" UID="2875"/>
+  <item type="instance" UID="3007"/>
+  <item type="instance" UID="3004"/>
+  <item type="instance" UID="3001"/>
+  <item type="instance" UID="2998"/>
+  <item type="instance" UID="2995"/>
+  <item type="instance" UID="2992"/>
+  <item type="instance" UID="2989"/>
+  <item type="instance" UID="2986"/>
   <item type="instance" UID="2548"/>
-  <item type="instance" UID="2960"/>
+  <item type="instance" UID="2983">
+    <item type="behavior" behaviorType="DragDropBehaivor" name="拖拽">
+      <item valueDataType="number" value="0" name="axes"/>
+      <item valueDataType="number" value="1" name="enabled"/>
+    </item>
+    <item type="behavior" behaviorType="NodeMovingBehavior" name="节点移动">
+      <item valueDataType="number" value="60" name="moveSpeed"/>
+    </item>
+  </item>
   <item type="instance" UID="2550"/>
   <item type="variable" variableName="times" variableType="number" initValue="0"/>
   <item type="variable" variableName="supermario_times" variableType="number" initValue="0"/>
@@ -138,7 +135,7 @@
     </item>
     <item type="action" persistent="false" callTarget="instance" callName="setValue" target="System">
       <item valueDataType="string" value="supermario_stop_run" name="10" variable="true"/>
-      <item valueDataType="any" value="1" name="11"/>
+      <item valueDataType="any" value="1" name="9"/>
     </item>
     <item type="action" persistent="false" callTarget="instance" callName="setAction" target="fire">
       <item valueDataType="number" value="1" name="frameType"/>
@@ -151,8 +148,13 @@
   </item>
   <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
     <item type="condition" callTarget="instance" paramsClass="OnButtonBeginEvent" callName="onButtonBegin" isTrigger="true" target="飞砖"/>
+    <item type="condition" callTarget="instance" paramsClass="CompareVariableEvent" callName="compareVariable" isTrigger="false" target="System">
+      <item valueDataType="string" value="supermario_stop_run" name="variable" variable="true"/>
+      <item valueDataType="string" value="%22notEqualTo%22" name="operationType"/>
+      <item valueDataType="any" value="1" name="value"/>
+    </item>
     <item type="action" persistent="false" callTarget="instance" callName="moveToObject" target="飞砖" behaviorName="移动到目标">
-      <item valueDataType="string" value="player" name="object" isFamily="false"/>
+      <item valueDataType="string" value="greenboy" name="object" isFamily="false"/>
     </item>
   </item>
   <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
@@ -169,14 +171,7 @@
     </item>
     <item type="action" persistent="false" callTarget="instance" callName="destory" target="飞砖"/>
   </item>
-  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
-    <item type="condition" callTarget="instance" paramsClass="OnCollisionWithOtherObjectEvent" callName="onCollisionWithOtherObject" isTrigger="true" target="player">
-      <item valueDataType="string" value="kick1" name="object" isFamily="false"/>
-    </item>
-    <item type="action" persistent="false" callTarget="instance" callName="rotateClockWise" target="左砖" behaviorName="曲线">
-      <item valueDataType="number" value="10" name="10"/>
-    </item>
-  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false"/>
   <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
     <item type="condition" callTarget="instance" paramsClass="OnPlatformMoveEvent" callName="onMove" isTrigger="true" target="player" behaviorName="横轴跑酷"/>
     <item type="action" persistent="false" callTarget="instance" callName="setAction" target="greenboy">
@@ -197,7 +192,24 @@
     </item>
     <item type="action" persistent="false" callTarget="instance" callName="setValue" target="System">
       <item valueDataType="string" value="supermario_stop_run" name="10" variable="true"/>
-      <item valueDataType="any" value="1" name="11"/>
+      <item valueDataType="any" value="1" name="9"/>
+    </item>
+  </item>
+  <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
+    <item type="condition" callTarget="instance" paramsClass="OnCollisionWithOtherObjectEvent" callName="onCollisionWithOtherObject" isTrigger="true" target="毒草蘑菇">
+      <item valueDataType="string" value="player" name="object" isFamily="false"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="setAction" target="greenboy">
+      <item valueDataType="number" value="1" name="frameType"/>
+      <item valueDataType="string" value="%22trancate%22" name="action"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="setAction" target="毒草蘑菇">
+      <item valueDataType="number" value="1" name="frameType"/>
+      <item valueDataType="string" value="%22yeah%22" name="action"/>
+    </item>
+    <item type="action" persistent="false" callTarget="instance" callName="setValue" target="System">
+      <item valueDataType="string" value="supermario_stop_run" name="10" variable="true"/>
+      <item valueDataType="any" value="1" name="9"/>
     </item>
   </item>
 </eventSheets>
