@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<layout id="null" sceneSize="2048,1300" next="" previous="opening" eventSheet="supermarioEventSheet" version="2.2">
+<layout id="null" sceneSize="2048,1300" next="" previous="middlefire" eventSheet="supermarioEventSheet" version="2.2">
   <layer index="0" parallaxX="20" parallaxY="100" layerAlpha="1" layerVisible="true" cacheAsBitmap="false" bgColor="" bgColorAlpha="" layerScaleX="100" layerScaleY="100"/>
   <layer index="1" parallaxX="50" parallaxY="100" layerAlpha="1" layerVisible="true" cacheAsBitmap="false" bgColor="" bgColorAlpha="" layerScaleX="100" layerScaleY="100"/>
   <layer index="2" parallaxX="100" parallaxY="100" layerAlpha="1" layerVisible="true" cacheAsBitmap="false" bgColor="" bgColorAlpha="" layerScaleX="100" layerScaleY="100"/>
@@ -10,7 +10,7 @@
     <item name="uiGuid" value="2550" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
-    <item name="x" value="-23.31553313989309" valueDataType="number"/>
+    <item name="x" value="-24.45156975911516" valueDataType="number"/>
     <item name="y" value="-22.568730219300846" valueDataType="number"/>
     <item name="anchorX" value="0" valueDataType="number"/>
     <item name="anchorY" value="0" valueDataType="number"/>
@@ -67,8 +67,8 @@
     <item name="uiGuid" value="2548" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
-    <item name="x" value="1548.706790914643" valueDataType="number"/>
-    <item name="y" value="911.0616091692206" valueDataType="number"/>
+    <item name="x" value="1547.2038936509769" valueDataType="number"/>
+    <item name="y" value="912.0948510379912" valueDataType="number"/>
     <item name="anchorX" value="0.5" valueDataType="number"/>
     <item name="anchorY" value="0.5" valueDataType="number"/>
     <item name="width" value="3142.79996894005" valueDataType="number"/>
@@ -89,12 +89,12 @@
     <item name="x" value="359.8221757207272" valueDataType="number"/>
     <item name="y" value="1409.3070928641455" valueDataType="number"/>
     <item name="anchorX" value="-2.5598704407432704" valueDataType="number"/>
-    <item name="anchorY" value="11.202786887724987" valueDataType="number"/>
+    <item name="anchorY" value="11.202786887724988" valueDataType="number"/>
     <item name="width" value="124.49997517288148" valueDataType="number"/>
     <item name="height" value="106.92487249409066" valueDataType="number"/>
     <item name="angle" value="0" valueDataType="number"/>
     <item name="alpha" value="1" valueDataType="number"/>
-    <item name="url" value="%22%22" valueDataType="string"/>
+    <item name="url" value="resource%2FuserAsset%2Flauncher%2F%22%22" valueDataType="string"/>
     <item name="enabled" value="false" valueDataType="boolean"/>
     <item name="collision" value="false" valueDataType="boolean"/>
     <item name="collisionData" value="0%2Fn0.00%7C106.92%2C124.50%7C106.92%2C124.50%7C0.00%2C0.00%7C0.00" sourceValue="0%2Fn0.00%7C106.92%2C124.50%7C106.92%2C124.50%7C0.00%2C0.00%7C0.00" valueDataType="string"/>
@@ -110,10 +110,10 @@
     <item name="anchorX" value="0.4797359911116804" valueDataType="number"/>
     <item name="anchorY" value="0.5607797229306947" valueDataType="number"/>
     <item name="width" value="109.6287344446738" valueDataType="number"/>
-    <item name="height" value="108.41199656691163" valueDataType="number"/>
+    <item name="height" value="108.41199656691164" valueDataType="number"/>
     <item name="angle" value="0" valueDataType="number"/>
     <item name="alpha" value="1" valueDataType="number"/>
-    <item name="url" value="%22%22" valueDataType="string"/>
+    <item name="url" value="resource%2FuserAsset%2Flauncher%2F%22%22" valueDataType="string"/>
     <item name="enabled" value="false" valueDataType="boolean"/>
     <item name="collision" value="false" valueDataType="boolean"/>
     <item name="collisionData" value="0%2Fn0.00%7C108.41%2C109.63%7C108.41%2C109.63%7C0.00%2C0.00%7C0.00" sourceValue="0%2Fn0.00%7C108.41%2C109.63%7C108.41%2C109.63%7C0.00%2C0.00%7C0.00" valueDataType="string"/>
@@ -128,11 +128,11 @@
     <item name="y" value="200.48091661833996" valueDataType="number"/>
     <item name="anchorX" value="0.4284288665156979" valueDataType="number"/>
     <item name="anchorY" value="0.4083450000211634" valueDataType="number"/>
-    <item name="width" value="100.72191357375853" valueDataType="number"/>
+    <item name="width" value="100.72191357375851" valueDataType="number"/>
     <item name="height" value="104.5960077858551" valueDataType="number"/>
     <item name="angle" value="0.537966325593942" valueDataType="number"/>
     <item name="alpha" value="1" valueDataType="number"/>
-    <item name="url" value="%22%22" valueDataType="string"/>
+    <item name="url" value="resource%2FuserAsset%2Flauncher%2F%22%22" valueDataType="string"/>
     <item name="enabled" value="false" valueDataType="boolean"/>
     <item name="collision" value="false" valueDataType="boolean"/>
     <item name="collisionData" value="0%2Fn0.00%7C104.60%2C100.72%7C104.60%2C100.72%7C0.00%2C0.00%7C0.00" sourceValue="0%2Fn0.00%7C104.60%2C100.72%7C104.60%2C100.72%7C0.00%2C0.00%7C0.00" valueDataType="string"/>
@@ -151,7 +151,7 @@
     <item name="height" value="30" valueDataType="number"/>
     <item name="angle" value="0" valueDataType="number"/>
     <item name="alpha" value="1" valueDataType="number"/>
-    <item name="url" value="%22%22" valueDataType="string"/>
+    <item name="url" value="resource%2FuserAsset%2Flauncher%2F%22%22" valueDataType="string"/>
     <item name="enabled" value="false" valueDataType="boolean"/>
     <item name="collision" value="false" valueDataType="boolean"/>
     <item name="collisionData" value="0%2Fn0.00%7C30.00%2C30.00%7C30.00%2C30.00%7C0.00%2C0.00%7C0.00" sourceValue="0%2Fn0.00%7C30.00%2C30.00%7C30.00%2C30.00%7C0.00%2C0.00%7C0.00" valueDataType="string"/>
@@ -170,7 +170,7 @@
     <item name="height" value="30" valueDataType="number"/>
     <item name="angle" value="0" valueDataType="number"/>
     <item name="alpha" value="1" valueDataType="number"/>
-    <item name="url" value="%22%22" valueDataType="string"/>
+    <item name="url" value="resource%2FuserAsset%2Flauncher%2F%22%22" valueDataType="string"/>
     <item name="enabled" value="false" valueDataType="boolean"/>
     <item name="collision" value="false" valueDataType="boolean"/>
     <item name="collisionData" value="0%2Fn0.00%7C30.00%2C30.00%7C30.00%2C30.00%7C0.00%2C0.00%7C0.00" sourceValue="0%2Fn0.00%7C30.00%2C30.00%7C30.00%2C30.00%7C0.00%2C0.00%7C0.00" valueDataType="string"/>
@@ -189,7 +189,7 @@
     <item name="height" value="30" valueDataType="number"/>
     <item name="angle" value="0" valueDataType="number"/>
     <item name="alpha" value="1" valueDataType="number"/>
-    <item name="url" value="%22%22" valueDataType="string"/>
+    <item name="url" value="resource%2FuserAsset%2Flauncher%2F%22%22" valueDataType="string"/>
     <item name="enabled" value="false" valueDataType="boolean"/>
     <item name="collision" value="false" valueDataType="boolean"/>
     <item name="collisionData" value="0%2Fn0.00%7C30.00%2C30.00%7C30.00%2C30.00%7C0.00%2C0.00%7C0.00" sourceValue="0%2Fn0.00%7C30.00%2C30.00%7C30.00%2C30.00%7C0.00%2C0.00%7C0.00" valueDataType="string"/>
@@ -208,7 +208,7 @@
     <item name="height" value="30" valueDataType="number"/>
     <item name="angle" value="0" valueDataType="number"/>
     <item name="alpha" value="1" valueDataType="number"/>
-    <item name="url" value="%22%22" valueDataType="string"/>
+    <item name="url" value="resource%2FuserAsset%2Flauncher%2F%22%22" valueDataType="string"/>
     <item name="enabled" value="false" valueDataType="boolean"/>
     <item name="collision" value="false" valueDataType="boolean"/>
     <item name="collisionData" value="0%2Fn0.00%7C30.00%2C30.00%7C30.00%2C30.00%7C0.00%2C0.00%7C0.00" sourceValue="0%2Fn0.00%7C30.00%2C30.00%7C30.00%2C30.00%7C0.00%2C0.00%7C0.00" valueDataType="string"/>
@@ -227,7 +227,7 @@
     <item name="height" value="104.89697603115332" valueDataType="number"/>
     <item name="angle" value="0" valueDataType="number"/>
     <item name="alpha" value="1" valueDataType="number"/>
-    <item name="url" value="%22%22" valueDataType="string"/>
+    <item name="url" value="resource%2FuserAsset%2Flauncher%2F%22%22" valueDataType="string"/>
     <item name="enabled" value="false" valueDataType="boolean"/>
     <item name="collision" value="false" valueDataType="boolean"/>
     <item name="collisionData" value="0%2Fn0.00%7C104.90%2C112.33%7C104.90%2C112.33%7C0.00%2C0.00%7C0.00" sourceValue="0%2Fn0.00%7C104.90%2C112.33%7C104.90%2C112.33%7C0.00%2C0.00%7C0.00" valueDataType="string"/>
@@ -323,7 +323,7 @@
     <item name="y" value="835.0881414231088" valueDataType="number"/>
     <item name="anchorX" value="0" valueDataType="number"/>
     <item name="anchorY" value="0" valueDataType="number"/>
-    <item name="width" value="1838.0560335132018" valueDataType="number"/>
+    <item name="width" value="1838.0560335132016" valueDataType="number"/>
     <item name="height" value="127.91665963000916" valueDataType="number"/>
     <item name="angle" value="0" valueDataType="number"/>
     <item name="alpha" value="1" valueDataType="number"/>
@@ -341,10 +341,10 @@
     <item name="uiGuid" value="2892" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
-    <item name="x" value="239.03846117252695" valueDataType="number"/>
-    <item name="y" value="790.8618005894347" valueDataType="number"/>
-    <item name="anchorX" value="0.49720349756205734" valueDataType="number"/>
-    <item name="anchorY" value="0.13306286980741164" valueDataType="number"/>
+    <item name="x" value="234.8115626184657" valueDataType="number"/>
+    <item name="y" value="917.2930328953528" valueDataType="number"/>
+    <item name="anchorX" value="0.4690241738683156" valueDataType="number"/>
+    <item name="anchorY" value="0.7670976529165847" valueDataType="number"/>
     <item name="width" value="100" valueDataType="number"/>
     <item name="height" value="200" valueDataType="number"/>
     <item name="angle" value="0" valueDataType="number"/>
@@ -354,22 +354,18 @@
     <item name="collisionData" value="0%2Fn2.50%7C176.95%2C-4.05%7C202.25%2C13.59%7C200.35_2.50%7C176.95%2C13.59%7C200.35%2C87.23%7C201.95_21.60%7C70.15%2C-4.00%7C102.25%2C-3.50%7C148.00%2C2.50%7C176.95%2C87.23%7C201.95%2C99.15%7C203.50%2C104.00%7C194.60%2C96.20%7C158.45_96.20%7C158.45%2C104.75%7C122.65%2C99.35%7C87.75_99.35%7C87.75%2C95.00%7C32.25%2C87.45%7C16.90%2C71.50%7C-1.65%2C33.40%7C-0.15%2C13.30%7C11.95%2C5.10%7C39.15%2C21.60%7C70.15%2C96.20%7C158.45" sourceValue="0%2Fn13.59%7C200.35%2C87.23%7C201.95%2C99.15%7C203.50%2C104.00%7C194.60%2C96.20%7C158.45%2C104.75%7C122.65%2C99.35%7C87.75%2C95.00%7C32.25%2C87.45%7C16.90%2C71.50%7C-1.65%2C33.40%7C-0.15%2C13.30%7C11.95%2C5.10%7C39.15%2C21.60%7C70.15%2C-4.00%7C102.25%2C-3.50%7C148.00%2C2.50%7C176.95%2C-4.05%7C202.25" valueDataType="string"/>
     <item name="actions" value="" valueDataType="string">
       <item name="stand" loop="0" fps="6" scaleX="1" scaleY="1">
-        <item src="resource%2FuserAsset%2Fsupermario%2Fui4ssshnp-tw9l7m.png"/>
+        <item src="resource%2FuserAsset%2Fsupermario%2Fui4ssshnp-tw9l7m(1).png"/>
       </item>
       <item name="run" loop="0" fps="4" scaleX="1" scaleY="1">
-        <item src="resource%2FuserAsset%2Fsupermario%2Fui4ssshnp-s0h1.png"/>
-        <item src="resource%2FuserAsset%2Fsupermario%2Fui4ssshnp-s0h2.png"/>
+        <item src="resource%2FuserAsset%2Fsupermario%2Fui4ssshnp-s0h1(1).png"/>
+        <item src="resource%2FuserAsset%2Fsupermario%2Fui4ssshnp-s0h2(1).png"/>
       </item>
       <item name="yeah" loop="0" fps="12" scaleX="1" scaleY="1">
-        <item src="resource%2FuserAsset%2Fsupermario%2Fui4ssshnp-pgcg891.png"/>
-        <item src="resource%2FuserAsset%2Fsupermario%2Fui4ssshnp-pgcg892.png"/>
+        <item src="resource%2FuserAsset%2Fsupermario%2Fui4ssshnp-pgcg891(1).png"/>
+        <item src="resource%2FuserAsset%2Fsupermario%2Fui4ssshnp-pgcg892(1).png"/>
       </item>
       <item name="jump" loop="0" fps="6" scaleX="1" scaleY="1">
-        <item src="resource%2FuserAsset%2Fsupermario%2Fui4ssshnp-s1f.png"/>
-      </item>
-      <item name="trancate" loop="1" fps="3" scaleX="1" scaleY="1">
-        <item src="resource%2FuserAsset%2Fsupermario%2Fui4ssshnp-tw9l7m.png"/>
-        <item src="resource%2FuserAsset%2Fsupermario%2Fui4ssshnp-pgcg892.png"/>
+        <item src="resource%2FuserAsset%2Fsupermario%2Fui4ssshnp-s1f(1).png"/>
       </item>
     </item>
     <item name="layer" value="2" valueDataType="number"/>
@@ -388,8 +384,8 @@
     <item name="uiGuid" value="2957" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
-    <item name="x" value="1085.3300259891626" valueDataType="number"/>
-    <item name="y" value="554.2166071839168" valueDataType="number"/>
+    <item name="x" value="1144.269336778954" valueDataType="number"/>
+    <item name="y" value="552.337985604334" valueDataType="number"/>
     <item name="anchorX" value="0.46482521441454216" valueDataType="number"/>
     <item name="anchorY" value="0.4893516824254023" valueDataType="number"/>
     <item name="width" value="109" valueDataType="number"/>
@@ -419,7 +415,7 @@
     <item name="uiGuid" value="2963" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
-    <item name="x" value="665.7" valueDataType="number"/>
+    <item name="x" value="722.7" valueDataType="number"/>
     <item name="y" value="599.36" valueDataType="number"/>
     <item name="anchorX" value="0.5" valueDataType="number"/>
     <item name="anchorY" value="0.5" valueDataType="number"/>
@@ -438,9 +434,9 @@
     <item name="uiGuid" value="2972" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
-    <item name="x" value="824.1599303707308" valueDataType="number"/>
-    <item name="y" value="542.5070572580682" valueDataType="number"/>
-    <item name="anchorX" value="0.49854657372258115" valueDataType="number"/>
+    <item name="x" value="882.1599303707305" valueDataType="number"/>
+    <item name="y" value="541.4738153892981" valueDataType="number"/>
+    <item name="anchorX" value="0.4985465737225811" valueDataType="number"/>
     <item name="anchorY" value="0.5203020733021254" valueDataType="number"/>
     <item name="width" value="215" valueDataType="number"/>
     <item name="height" value="105" valueDataType="number"/>
@@ -460,10 +456,10 @@
     <item name="uiGuid" value="2975" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
-    <item name="x" value="659.7946046687141" valueDataType="number"/>
-    <item name="y" value="537.2511963882828" valueDataType="number"/>
-    <item name="anchorX" value="0.4555548241856979" valueDataType="number"/>
-    <item name="anchorY" value="0.4667691509322443" valueDataType="number"/>
+    <item name="x" value="717.1370871158599" valueDataType="number"/>
+    <item name="y" value="536.8147828621577" valueDataType="number"/>
+    <item name="anchorX" value="0.44660900714006424" valueDataType="number"/>
+    <item name="anchorY" value="0.465874569227682" valueDataType="number"/>
     <item name="width" value="105" valueDataType="number"/>
     <item name="height" value="105" valueDataType="number"/>
     <item name="angle" value="0" valueDataType="number"/>
@@ -482,8 +478,8 @@
     <item name="uiGuid" value="2977" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
-    <item name="x" value="972.2142589670428" valueDataType="number"/>
-    <item name="y" value="532.7425149381695" valueDataType="number"/>
+    <item name="x" value="1030.214258967043" valueDataType="number"/>
+    <item name="y" value="531.7425149381695" valueDataType="number"/>
     <item name="anchorX" value="0.3923049178788114" valueDataType="number"/>
     <item name="anchorY" value="0.42162623664010296" valueDataType="number"/>
     <item name="width" value="105" valueDataType="number"/>
@@ -507,10 +503,10 @@
     <item name="uiGuid" value="2944" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="false" valueDataType="boolean"/>
-    <item name="x" value="1100.9" valueDataType="number"/>
-    <item name="y" value="591.52" valueDataType="number"/>
-    <item name="anchorX" value="1.6374389239784473" valueDataType="number"/>
-    <item name="anchorY" value="-0.4928021214263682" valueDataType="number"/>
+    <item name="x" value="1036.6075296964964" valueDataType="number"/>
+    <item name="y" value="594.3379323693741" valueDataType="number"/>
+    <item name="anchorX" value="0.4445142209434107" valueDataType="number"/>
+    <item name="anchorY" value="-0.09024035437291136" valueDataType="number"/>
     <item name="width" value="100" valueDataType="number"/>
     <item name="height" value="7" valueDataType="number"/>
     <item name="angle" value="0" valueDataType="number"/>
@@ -526,10 +522,10 @@
     <item name="uiGuid" value="2954" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
-    <item name="x" value="978.3496856199483" valueDataType="number"/>
-    <item name="y" value="447.47895764702935" valueDataType="number"/>
+    <item name="x" value="1036.3496856199486" valueDataType="number"/>
+    <item name="y" value="448.3243373578417" valueDataType="number"/>
     <item name="anchorX" value="0.44005745204778607" valueDataType="number"/>
-    <item name="anchorY" value="0.5077680118364968" valueDataType="number"/>
+    <item name="anchorY" value="0.5170161497531012" valueDataType="number"/>
     <item name="width" value="88.9471461465962" valueDataType="number"/>
     <item name="height" value="91.41080274057776" valueDataType="number"/>
     <item name="angle" value="0" valueDataType="number"/>
@@ -546,6 +542,9 @@
         <item src="resource%2FuserAsset%2Fcom%2Fkdkkeohdy-m7f1.png"/>
         <item src="resource%2FuserAsset%2Fcom%2Fkdkkeohdy-lxw.png"/>
         <item src="resource%2FuserAsset%2Fcom%2Fkdkkeohdy-m7fk67.png"/>
+      </item>
+      <item name="slient" loop="0" fps="6" scaleX="1" scaleY="1">
+        <item src="resource%2FuserAsset%2Fcom%2Fkdkkeohdy.png"/>
       </item>
     </item>
     <item name="layer" value="4" valueDataType="number"/>
