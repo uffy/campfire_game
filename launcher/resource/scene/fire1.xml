@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<layout id="null" sceneSize="2048,1300" next="middlefire" previous="opening" eventSheet="fireEventSheet" version="2.2">
+<layout id="null" sceneSize="2048,1300" next="middlefire" previous="opening" eventSheet="fire1EventSheet" version="2.2">
   <layer index="0" parallaxX="100" parallaxY="100" layerAlpha="1" layerVisible="false" cacheAsBitmap="false" bgColor="" bgColorAlpha="" layerScaleX="100" layerScaleY="100"/>
-  <layer index="1" parallaxX="100" parallaxY="100" layerAlpha="1" layerVisible="false" cacheAsBitmap="false" bgColor="" bgColorAlpha="" layerScaleX="100" layerScaleY="100"/>
-  <layer index="2" parallaxX="100" parallaxY="100" layerAlpha="1" layerVisible="false" cacheAsBitmap="false" bgColor="" bgColorAlpha="" layerScaleX="100" layerScaleY="100"/>
-  <item UID="3017" plugin="AISprite" name="AISprite3016" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="0" family="displayobject">
+  <item UID="3112" plugin="AISprite" name="AISprite3016" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="0" family="displayobject">
     <item name="name" value="AISprite3016" valueDataType="string"/>
-    <item name="uiGuid" value="3017" valueDataType="string"/>
+    <item name="uiGuid" value="3112" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
     <item name="x" value="1031.11815159248" valueDataType="number"/>
@@ -20,11 +18,11 @@
     <item name="enabled" value="false" valueDataType="boolean"/>
     <item name="collision" value="false" valueDataType="boolean"/>
     <item name="collisionData" value="0%2Fn0.00%7C1373.67%2C2064.56%7C1373.67%2C2064.56%7C0.00%2C0.00%7C0.00" sourceValue="0%2Fn0.00%7C1373.67%2C2064.56%7C1373.67%2C2064.56%7C0.00%2C0.00%7C0.00" valueDataType="string"/>
-    <item name="layer" value="2" valueDataType="number"/>
+    <item name="layer" value="0" valueDataType="number"/>
   </item>
-  <item UID="3020" plugin="AITiledBackground" name="AITiledBackground3019" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="1" family="displayobject">
+  <item UID="3111" plugin="AITiledBackground" name="AITiledBackground3019" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="1" family="displayobject">
     <item name="name" value="AITiledBackground3019" valueDataType="string"/>
-    <item name="uiGuid" value="3020" valueDataType="string"/>
+    <item name="uiGuid" value="3111" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
     <item name="x" value="986.5546074706756" valueDataType="number"/>
@@ -39,11 +37,11 @@
     <item name="enabled" value="false" valueDataType="boolean"/>
     <item name="collision" value="true" valueDataType="boolean"/>
     <item name="collisionData" value="0%2Fn0.00%7C127.00%2C2181.43%7C127.00%2C2181.43%7C0.00%2C0.00%7C0.00" sourceValue="0%2Fn0.00%7C127.00%2C2181.43%7C127.00%2C2181.43%7C0.00%2C0.00%7C0.00" valueDataType="string"/>
-    <item name="layer" value="2" valueDataType="number"/>
+    <item name="layer" value="0" valueDataType="number"/>
   </item>
-  <item UID="3023" plugin="AISprite" name="AISprite3022" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="2" family="displayobject">
+  <item UID="3110" plugin="AISprite" name="AISprite3022" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="2" family="displayobject">
     <item name="name" value="AISprite3022" valueDataType="string"/>
-    <item name="uiGuid" value="3023" valueDataType="string"/>
+    <item name="uiGuid" value="3110" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
     <item name="x" value="671.3463980386528" valueDataType="number"/>
@@ -58,14 +56,14 @@
     <item name="enabled" value="false" valueDataType="boolean"/>
     <item name="collision" value="true" valueDataType="boolean"/>
     <item name="collisionData" value="0%2Fn0.00%7C128.00%2C128.00%7C128.00%2C128.00%7C0.00%2C0.00%7C0.00" sourceValue="0%2Fn0.00%7C128.00%2C128.00%7C128.00%2C128.00%7C0.00%2C0.00%7C0.00" valueDataType="string"/>
-    <item name="layer" value="2" valueDataType="number"/>
+    <item name="layer" value="0" valueDataType="number"/>
     <item name="behaviors">
       <item type="behavior" behaviorType="SolidBehaivor" name="刚体"/>
     </item>
   </item>
-  <item UID="3026" plugin="AISprite" name="AISprite3025" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="3" family="displayobject">
+  <item UID="3109" plugin="AISprite" name="AISprite3025" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="3" family="displayobject">
     <item name="name" value="AISprite3025" valueDataType="string"/>
-    <item name="uiGuid" value="3026" valueDataType="string"/>
+    <item name="uiGuid" value="3109" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
     <item name="x" value="1053.2045324156163" valueDataType="number"/>
@@ -80,14 +78,14 @@
     <item name="enabled" value="false" valueDataType="boolean"/>
     <item name="collision" value="true" valueDataType="boolean"/>
     <item name="collisionData" value="0%2Fn0.00%7C128.00%2C128.00%7C128.00%2C128.00%7C0.00%2C0.00%7C0.00" sourceValue="0%2Fn0.00%7C128.00%2C128.00%7C128.00%2C128.00%7C0.00%2C0.00%7C0.00" valueDataType="string"/>
-    <item name="layer" value="2" valueDataType="number"/>
+    <item name="layer" value="0" valueDataType="number"/>
     <item name="behaviors">
       <item type="behavior" behaviorType="SolidBehaivor" name="刚体"/>
     </item>
   </item>
-  <item UID="3029" plugin="AISprite" name="AISprite3028" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="4" family="displayobject">
+  <item UID="3108" plugin="AISprite" name="AISprite3028" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="4" family="displayobject">
     <item name="name" value="AISprite3028" valueDataType="string"/>
-    <item name="uiGuid" value="3029" valueDataType="string"/>
+    <item name="uiGuid" value="3108" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
     <item name="x" value="1293.4085896690308" valueDataType="number"/>
@@ -102,14 +100,14 @@
     <item name="enabled" value="false" valueDataType="boolean"/>
     <item name="collision" value="true" valueDataType="boolean"/>
     <item name="collisionData" value="0%2Fn0.00%7C128.00%2C128.00%7C128.00%2C128.00%7C0.00%2C0.00%7C0.00" sourceValue="0%2Fn0.00%7C128.00%2C128.00%7C128.00%2C128.00%7C0.00%2C0.00%7C0.00" valueDataType="string"/>
-    <item name="layer" value="2" valueDataType="number"/>
+    <item name="layer" value="0" valueDataType="number"/>
     <item name="behaviors">
       <item type="behavior" behaviorType="SolidBehaivor" name="刚体"/>
     </item>
   </item>
-  <item UID="3030" plugin="AISprite" name="AISprite3025" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="5" family="displayobject">
+  <item UID="3107" plugin="AISprite" name="AISprite3025" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="5" family="displayobject">
     <item name="name" value="AISprite3025" valueDataType="string"/>
-    <item name="uiGuid" value="3030" valueDataType="string"/>
+    <item name="uiGuid" value="3107" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
     <item name="x" value="1169.749667548236" valueDataType="number"/>
@@ -124,14 +122,14 @@
     <item name="enabled" value="false" valueDataType="boolean"/>
     <item name="collision" value="true" valueDataType="boolean"/>
     <item name="collisionData" value="0%2Fn0.00%7C128.00%2C128.00%7C128.00%2C128.00%7C0.00%2C0.00%7C0.00" sourceValue="0%2Fn0.00%7C128.00%2C128.00%7C128.00%2C128.00%7C0.00%2C0.00%7C0.00" valueDataType="string"/>
-    <item name="layer" value="2" valueDataType="number"/>
+    <item name="layer" value="0" valueDataType="number"/>
     <item name="behaviors">
       <item type="behavior" behaviorType="SolidBehaivor" name="刚体"/>
     </item>
   </item>
-  <item UID="3031" plugin="AISprite" name="AISprite3025" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="6" family="displayobject">
+  <item UID="3106" plugin="AISprite" name="AISprite3025" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="6" family="displayobject">
     <item name="name" value="AISprite3025" valueDataType="string"/>
-    <item name="uiGuid" value="3031" valueDataType="string"/>
+    <item name="uiGuid" value="3106" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
     <item name="x" value="783.6547412949542" valueDataType="number"/>
@@ -146,14 +144,14 @@
     <item name="enabled" value="false" valueDataType="boolean"/>
     <item name="collision" value="true" valueDataType="boolean"/>
     <item name="collisionData" value="0%2Fn0.00%7C128.00%2C128.00%7C128.00%2C128.00%7C0.00%2C0.00%7C0.00" sourceValue="0%2Fn0.00%7C128.00%2C128.00%7C128.00%2C128.00%7C0.00%2C0.00%7C0.00" valueDataType="string"/>
-    <item name="layer" value="2" valueDataType="number"/>
+    <item name="layer" value="0" valueDataType="number"/>
     <item name="behaviors">
       <item type="behavior" behaviorType="SolidBehaivor" name="刚体"/>
     </item>
   </item>
-  <item UID="3032" plugin="AISprite" name="AISprite3025" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="7" family="displayobject">
+  <item UID="3105" plugin="AISprite" name="AISprite3025" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="7" family="displayobject">
     <item name="name" value="AISprite3025" valueDataType="string"/>
-    <item name="uiGuid" value="3032" valueDataType="string"/>
+    <item name="uiGuid" value="3105" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
     <item name="x" value="927.6268040433368" valueDataType="number"/>
@@ -168,14 +166,14 @@
     <item name="enabled" value="false" valueDataType="boolean"/>
     <item name="collision" value="true" valueDataType="boolean"/>
     <item name="collisionData" value="0%2Fn0.00%7C128.00%2C128.00%7C128.00%2C128.00%7C0.00%2C0.00%7C0.00" sourceValue="0%2Fn0.00%7C128.00%2C128.00%7C128.00%2C128.00%7C0.00%2C0.00%7C0.00" valueDataType="string"/>
-    <item name="layer" value="2" valueDataType="number"/>
+    <item name="layer" value="0" valueDataType="number"/>
     <item name="behaviors">
       <item type="behavior" behaviorType="SolidBehaivor" name="刚体"/>
     </item>
   </item>
-  <item UID="3038" plugin="AIMovieClip" name="雪人" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="8" family="displayobject">
+  <item UID="3104" plugin="AIMovieClip" name="雪人" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="8" family="displayobject">
     <item name="name" value="%E9%9B%AA%E4%BA%BA" valueDataType="string"/>
-    <item name="uiGuid" value="3038" valueDataType="string"/>
+    <item name="uiGuid" value="3104" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
     <item name="x" value="1117.578657202164" valueDataType="number"/>
@@ -200,7 +198,7 @@
         <item src="resource%2FuserAsset%2Fcom%2Ftt6fju-qrxgeu3.png"/>
       </item>
     </item>
-    <item name="layer" value="2" valueDataType="number"/>
+    <item name="layer" value="0" valueDataType="number"/>
     <item name="behaviors">
       <item type="behavior" behaviorType="SinBehavior" name="曲线">
         <item valueDataType="number" value="1" name="active"/>
@@ -215,9 +213,9 @@
       </item>
     </item>
   </item>
-  <item UID="3048" plugin="AIMovieClip" name="篝火" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="9" family="displayobject">
+  <item UID="3103" plugin="AIMovieClip" name="篝火" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="9" family="displayobject">
     <item name="name" value="%E7%AF%9D%E7%81%AB" valueDataType="string"/>
-    <item name="uiGuid" value="3048" valueDataType="string"/>
+    <item name="uiGuid" value="3103" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
     <item name="x" value="781.3926892230045" valueDataType="number"/>
@@ -240,14 +238,14 @@
         <item src="resource%2FuserAsset%2Fcom%2Fkdkkeohdy-m7f2.png"/>
       </item>
     </item>
-    <item name="layer" value="2" valueDataType="number"/>
+    <item name="layer" value="0" valueDataType="number"/>
   </item>
-  <item UID="3051" plugin="AIMovieClip" name="对话框" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="10" family="displayobject">
+  <item UID="3102" plugin="AIMovieClip" name="对话框" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="10" family="displayobject">
     <item name="name" value="%E5%AF%B9%E8%AF%9D%E6%A1%86" valueDataType="string"/>
-    <item name="uiGuid" value="3051" valueDataType="string"/>
+    <item name="uiGuid" value="3102" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
-    <item name="x" value="1231.0426213517921" valueDataType="number"/>
+    <item name="x" value="1231.042621351792" valueDataType="number"/>
     <item name="y" value="329.7475155532701" valueDataType="number"/>
     <item name="anchorX" value="0.5" valueDataType="number"/>
     <item name="anchorY" value="0.5" valueDataType="number"/>
@@ -264,7 +262,7 @@
         <item src="resource%2FuserAsset%2Fcom%2Frmlkli2.png"/>
       </item>
     </item>
-    <item name="layer" value="2" valueDataType="number"/>
+    <item name="layer" value="0" valueDataType="number"/>
     <item name="behaviors">
       <item type="behavior" behaviorType="FadeBehavior" name="淡入淡出">
         <item valueDataType="number" value="0" name="activeAtStartType"/>
@@ -276,9 +274,9 @@
       </item>
     </item>
   </item>
-  <item UID="3054" plugin="AIMovieClip" name="雪人文字" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="11" family="displayobject">
+  <item UID="3101" plugin="AIMovieClip" name="雪人文字" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="11" family="displayobject">
     <item name="name" value="%E9%9B%AA%E4%BA%BA%E6%96%87%E5%AD%97" valueDataType="string"/>
-    <item name="uiGuid" value="3054" valueDataType="string"/>
+    <item name="uiGuid" value="3101" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
     <item name="x" value="1227.2138585351047" valueDataType="number"/>
@@ -301,11 +299,11 @@
         <item src="resource%2FuserAsset%2Fcom%2Fk1zi1j-ginkf9jddff1rn8tt6fjugui.png"/>
       </item>
     </item>
-    <item name="layer" value="2" valueDataType="number"/>
+    <item name="layer" value="0" valueDataType="number"/>
   </item>
-  <item UID="3057" plugin="AIMovieClip" name="火箭" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="12" family="displayobject">
+  <item UID="3100" plugin="AIMovieClip" name="火箭" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="12" family="displayobject">
     <item name="name" value="%E7%81%AB%E7%AE%AD" valueDataType="string"/>
-    <item name="uiGuid" value="3057" valueDataType="string"/>
+    <item name="uiGuid" value="3100" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
     <item name="x" value="1806.9056841242564" valueDataType="number"/>
@@ -325,7 +323,7 @@
         <item src="resource%2FuserAsset%2Fcom%2Fm7fofh1.png"/>
       </item>
     </item>
-    <item name="layer" value="2" valueDataType="number"/>
+    <item name="layer" value="0" valueDataType="number"/>
     <item name="behaviors">
       <item type="behavior" behaviorType="DragDropBehaivor" name="拖拽">
         <item valueDataType="number" value="0" name="axes"/>

@@ -14,7 +14,6 @@
   <item type="variable" variableName="times" variableType="number" initValue="0"/>
   <item type="variable" variableName="supermario_times" variableType="number" initValue="0"/>
   <item type="variable" variableName="supermario_stop_run" variableType="number" initValue="0"/>
-  <item type="variable" variableName="fire_run" variableType="number" initValue="0"/>
   <item type="event" conditionRelationShip="true" triggerOnceWhileTrue="false">
     <item type="condition" callTarget="instance" paramsClass="OnSceneInitCompleteEvent" callName="onSceneInitComplete" isTrigger="true" target="System"/>
     <item type="action" persistent="false" callTarget="instance" callName="setAction" target="篝火">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<layout id="null" sceneSize="1280,1024" next="fire" previous="" eventSheet="openingEventSheet" version="2.2">
+<layout id="null" sceneSize="1280,1024" next="fire1" previous="" eventSheet="openingEventSheet" version="2.2">
   <layer index="0" parallaxX="100" parallaxY="100" layerAlpha="1" layerVisible="true" cacheAsBitmap="false" bgColor="" bgColorAlpha="" layerScaleX="100" layerScaleY="100"/>
   <layer index="1" parallaxX="100" parallaxY="100" layerAlpha="1" layerVisible="true" cacheAsBitmap="false" bgColor="" bgColorAlpha="" layerScaleX="100" layerScaleY="100"/>
   <item UID="2721" plugin="AITouch" name="Touch" cacheAsBitmap="false" parallaxX="100" parallaxY="100" index="0" family="">
@@ -13,8 +13,8 @@
     <item name="uiGuid" value="3060" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
-    <item name="x" value="957.9413169884363" valueDataType="number"/>
-    <item name="y" value="540.4415665202118" valueDataType="number"/>
+    <item name="x" value="958.5902556486805" valueDataType="number"/>
+    <item name="y" value="542.9428173867125" valueDataType="number"/>
     <item name="anchorX" value="0.5" valueDataType="number"/>
     <item name="anchorY" value="0.5" valueDataType="number"/>
     <item name="width" value="1920" valueDataType="number"/>
@@ -32,9 +32,9 @@
     <item name="uiGuid" value="3063" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
-    <item name="x" value="996.7473932693745" valueDataType="number"/>
-    <item name="y" value="752.1779340764489" valueDataType="number"/>
-    <item name="anchorX" value="0.48416883706554475" valueDataType="number"/>
+    <item name="x" value="978.7473932693744" valueDataType="number"/>
+    <item name="y" value="753.1779340764489" valueDataType="number"/>
+    <item name="anchorX" value="0.4841688370655447" valueDataType="number"/>
     <item name="anchorY" value="0.6158143536360863" valueDataType="number"/>
     <item name="width" value="107.9739818174412" valueDataType="number"/>
     <item name="height" value="30.612277214341702" valueDataType="number"/>
@@ -59,12 +59,12 @@
     <item name="uiGuid" value="3066" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
-    <item name="x" value="840.536634755805" valueDataType="number"/>
-    <item name="y" value="392.8590581174832" valueDataType="number"/>
+    <item name="x" value="798.536634755805" valueDataType="number"/>
+    <item name="y" value="395.8590581174832" valueDataType="number"/>
     <item name="anchorX" value="0.1421498628689849" valueDataType="number"/>
     <item name="anchorY" value="-0.3331855324169212" valueDataType="number"/>
     <item name="width" value="94" valueDataType="number"/>
-    <item name="height" value="126.16455002201747" valueDataType="number"/>
+    <item name="height" value="126.16455002201748" valueDataType="number"/>
     <item name="angle" value="0" valueDataType="number"/>
     <item name="alpha" value="1" valueDataType="number"/>
     <item name="enabled" value="false" valueDataType="boolean"/>
