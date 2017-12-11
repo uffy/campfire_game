@@ -247,7 +247,7 @@
     <item name="uiGuid" value="3051" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
-    <item name="x" value="1231.0426213517921" valueDataType="number"/>
+    <item name="x" value="1231.042621351792" valueDataType="number"/>
     <item name="y" value="329.7475155532701" valueDataType="number"/>
     <item name="anchorX" value="0.5" valueDataType="number"/>
     <item name="anchorY" value="0.5" valueDataType="number"/>

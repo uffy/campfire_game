@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="篝火" version="2.2" showFps="0" openLog="1" fps="60" scaleMode="0" orientaion="0" renderMode="1" bgColor="0" stagewidth="1920" stageheight="1080" startscenename="opening">
   <objects>
-    <type uiname="Ajax" uitype="AIAjax"/>
     <type uiname="Keyboard" uitype="AIKeyboard"/>
     <type uiname="Function" uitype="AIFunction"/>
-    <type uiname="Touch" uitype="AITouch"/>
     <type uiname="System" uitype="AISystem"/>
+    <type uiname="Touch" uitype="AITouch"/>
     <type uiname="WebStorage" uitype="AIWebStorage"/>
+    <type uiname="Ajax" uitype="AIAjax"/>
     <type uiname="WebSocket" uitype="AIWebSocket"/>
     <type uiname="Browser" uitype="AIBrowser"/>
     <type uiname="Global" uitype="Global"/>
@@ -59,7 +59,6 @@
     <type uiname="火箭" uitype="AIMovieClip"/>
     <type uiname="start" uitype="AISprite"/>
     <type uiname="AISpriteSheet3059" uitype="AISprite"/>
-    <type uiname="篝火" uitype="AIMovieClip"/>
     <type uiname="middlefire" uitype="Scene"/>
     <type uiname="Layer3068" uitype="Layer"/>
     <type uiname="文字" uitype="AISprite"/>
@@ -770,11 +769,11 @@
           </action>
           <action type="setValue" targetuiname="System" targetuitype="AISystem" isConflict="false" enabled="true">
             <properties>
-              <p key="10" propertyname="times" valuetype="string" edittype="variable">
-                <description>%E8%AF%B7%E9%80%89%E6%8B%A9%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E4%B8%80%E4%B8%AA%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F%E3%80%82</description>
+              <p key="10" value="%22middlefire%22" valuetype="string">
+                <description>%E8%AF%B7%E9%80%89%E6%8B%A9%E4%B8%80%E4%B8%AA%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E3%80%82</description>
               </p>
-              <p key="11" value="0" valuetype="any">
-                <description>%E6%8C%87%E5%AE%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F%E8%A6%81%E8%AE%BE%E7%BD%AE%E7%9A%84%E5%80%BC%E3%80%82</description>
+              <p key="9" value="0" valuetype="any">
+                <description>%E6%8C%87%E5%AE%9A%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC%E3%80%82</description>
               </p>
             </properties>
           </action>
@@ -978,7 +977,7 @@
                 <p key="width" value="94" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%AE%BD%E5%BA%A6</description>
                 </p>
-                <p key="height" value="126.16455002201747" valuetype="number">
+                <p key="height" value="126.16455002201748" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E9%AB%98%E5%BA%A6</description>
                 </p>
                 <p key="angle" value="0" valuetype="number">
@@ -993,10 +992,10 @@
                 <p key="collision" value="false" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
                 </p>
-                <p key="collisionData" value="%22%22" valuetype="string">
+                <p key="collisionData" value="%5Bobject%20_214%5D" valuetype="string">
                   <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
                 </p>
-                <p key="actions" value="%7B%22scaleY%22%3A1%2C%22fps%22%3A6%2C%22loop%22%3A0%2C%22action%22%3A%22run%22%2C%22scaleX%22%3A1%2C%22frames%22%3A%5B%7B%22_1637%22%3Anull%2C%22width%22%3Anull%2C%22_1636%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E6%9C%A8%E6%9D%90%E5%A0%86-%E7%81%AB1.png%22%2C%22height%22%3Anull%7D%2C%7B%22_1637%22%3Anull%2C%22width%22%3Anull%2C%22_1636%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E6%9C%A8%E6%9D%90%E5%A0%86-%E7%81%AB2.png%22%2C%22height%22%3Anull%7D%5D%7D" valuetype="string" edittype="animation">
+                <p key="actions" value="%7B%22scaleY%22%3A1%2C%22fps%22%3A6%2C%22loop%22%3A0%2C%22action%22%3A%22run%22%2C%22scaleX%22%3A1%2C%22frames%22%3A%5B%7B%22_1637%22%3A0%2C%22width%22%3A0%2C%22_1636%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E6%9C%A8%E6%9D%90%E5%A0%86-%E7%81%AB1.png%22%2C%22height%22%3A0%7D%2C%7B%22_1637%22%3A0%2C%22width%22%3A0%2C%22_1636%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E6%9C%A8%E6%9D%90%E5%A0%86-%E7%81%AB2.png%22%2C%22height%22%3A0%7D%5D%7D" valuetype="string" edittype="animation">
                   <description>%E7%82%B9%E5%87%BB%E6%8C%89%E7%BA%BD%E7%BC%96%E8%BE%91%E5%8A%A8%E7%94%BB</description>
                 </p>
               </properties>
@@ -1018,13 +1017,13 @@
                 <p key="visible" value="true" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
                 </p>
-                <p key="x" value="996.7473932693745" valuetype="number">
+                <p key="x" value="996.7473932693744" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
                 </p>
                 <p key="y" value="752.1779340764489" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E5%9E%82%E7%9B%B4%E5%9D%90%E6%A0%87</description>
                 </p>
-                <p key="anchorX" value="0.48416883706554475" valuetype="number">
+                <p key="anchorX" value="0.4841688370655447" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E6%96%B9%E5%90%91%E9%94%9A%E7%82%B9%E5%9D%90%E6%A0%87</description>
                 </p>
                 <p key="anchorY" value="0.6158143536360863" valuetype="number">
@@ -1051,7 +1050,7 @@
                 <p key="collision" value="false" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
                 </p>
-                <p key="collisionData" value="%22%22" valuetype="string">
+                <p key="collisionData" value="%5Bobject%20_214%5D" valuetype="string">
                   <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
                 </p>
               </properties>
@@ -1090,7 +1089,7 @@
                 <p key="visible" value="true" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
                 </p>
-                <p key="x" value="957.9413169884363" valuetype="number">
+                <p key="x" value="957.9413169884364" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
                 </p>
                 <p key="y" value="540.4415665202118" valuetype="number">
@@ -1123,7 +1122,7 @@
                 <p key="collision" value="false" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
                 </p>
-                <p key="collisionData" value="%22%22" valuetype="string">
+                <p key="collisionData" value="%5Bobject%20_214%5D" valuetype="string">
                   <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
                 </p>
               </properties>
@@ -1317,7 +1316,7 @@
                 <p key="collisionData" value="%5Bobject%20_214%5D" valuetype="string">
                   <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
                 </p>
-                <p key="actions" value="%7B%22scaleY%22%3A1%2C%22fps%22%3A1%2C%22loop%22%3A2%2C%22action%22%3A%22run%22%2C%22scaleX%22%3A1%2C%22frames%22%3A%5B%7B%22_1637%22%3A0%2C%22width%22%3A0%2C%22_1636%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E6%96%87%E5%AD%97-%E8%BA%AB%E4%B8%BA%E9%9B%AA%E4%BA%BA%E6%88%91%E6%80%8E%E4%B9%88.png%22%2C%22height%22%3A0%7D%2C%7B%22_1637%22%3A0%2C%22width%22%3A0%2C%22_1636%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E6%96%87%E5%AD%97-%E5%A5%BD%E5%86%B7%E5%95%8A.png%22%2C%22height%22%3A0%7D%5D%7D%26%26%7B%22scaleY%22%3A1%2C%22fps%22%3A6%2C%22loop%22%3A0%2C%22action%22%3A%22warm%22%2C%22scaleX%22%3A1%2C%22frames%22%3A%5B%7B%22_1637%22%3Anull%2C%22width%22%3Anull%2C%22_1636%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E6%96%87%E5%AD%97-%E5%8E%9F%E6%9D%A5%E6%88%91%E4%B8%8D%E8%AF%B4%E9%9B%AA%E4%BA%BA%E5%95%8A.png%22%2C%22height%22%3Anull%7D%5D%7D" valuetype="string" edittype="animation">
+                <p key="actions" value="%7B%22scaleY%22%3A1%2C%22fps%22%3A1%2C%22loop%22%3A2%2C%22action%22%3A%22run%22%2C%22scaleX%22%3A1%2C%22frames%22%3A%5B%7B%22_1637%22%3A0%2C%22width%22%3A0%2C%22_1636%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E6%96%87%E5%AD%97-%E8%BA%AB%E4%B8%BA%E9%9B%AA%E4%BA%BA%E6%88%91%E6%80%8E%E4%B9%88.png%22%2C%22height%22%3A0%7D%2C%7B%22_1637%22%3A0%2C%22width%22%3A0%2C%22_1636%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E6%96%87%E5%AD%97-%E5%A5%BD%E5%86%B7%E5%95%8A.png%22%2C%22height%22%3A0%7D%5D%7D%26%26%7B%22scaleY%22%3A1%2C%22fps%22%3A6%2C%22loop%22%3A0%2C%22action%22%3A%22warm%22%2C%22scaleX%22%3A1%2C%22frames%22%3A%5B%7B%22_1637%22%3A0%2C%22width%22%3A0%2C%22_1636%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E6%96%87%E5%AD%97-%E5%8E%9F%E6%9D%A5%E6%88%91%E4%B8%8D%E8%AF%B4%E9%9B%AA%E4%BA%BA%E5%95%8A.png%22%2C%22height%22%3A0%7D%5D%7D" valuetype="string" edittype="animation">
                   <description>%E7%82%B9%E5%87%BB%E6%8C%89%E7%BA%BD%E7%BC%96%E8%BE%91%E5%8A%A8%E7%94%BB</description>
                 </p>
               </properties>
@@ -1339,7 +1338,7 @@
                 <p key="visible" value="true" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E6%98%BE%E7%A4%BA%E5%AF%B9%E8%B1%A1%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A7%81</description>
                 </p>
-                <p key="x" value="1231.0426213517921" valuetype="number">
+                <p key="x" value="1231.042621351792" valuetype="number">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E7%9A%84%E6%B0%B4%E5%B9%B3%E5%9D%90%E6%A0%87</description>
                 </p>
                 <p key="y" value="329.7475155532701" valuetype="number">
@@ -1502,10 +1501,10 @@
                 <p key="collision" value="false" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
                 </p>
-                <p key="collisionData" value="%22%22" valuetype="string">
+                <p key="collisionData" value="%5Bobject%20_214%5D" valuetype="string">
                   <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
                 </p>
-                <p key="actions" value="%7B%22scaleY%22%3A1%2C%22fps%22%3A60%2C%22loop%22%3A0%2C%22action%22%3A%22%E6%89%93%E9%A2%A4%22%2C%22scaleX%22%3A1%2C%22frames%22%3A%5B%7B%22_1637%22%3Anull%2C%22width%22%3Anull%2C%22_1636%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E9%9B%AA%E4%BA%BA-%E8%A1%A8%E6%83%852.png%22%2C%22height%22%3Anull%7D%2C%7B%22_1637%22%3Anull%2C%22width%22%3Anull%2C%22_1636%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E9%9B%AA%E4%BA%BA.png%22%2C%22height%22%3Anull%7D%5D%7D%26%26%7B%22scaleY%22%3A1%2C%22fps%22%3A1%2C%22loop%22%3A1%2C%22action%22%3A%22%E8%9E%8D%E5%8C%96%22%2C%22scaleX%22%3A1%2C%22frames%22%3A%5B%7B%22_1637%22%3Anull%2C%22width%22%3Anull%2C%22_1636%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E9%9B%AA%E4%BA%BA-%E8%9E%8D%E5%8C%961.png%22%2C%22height%22%3Anull%7D%2C%7B%22_1637%22%3Anull%2C%22width%22%3Anull%2C%22_1636%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E9%9B%AA%E4%BA%BA-%E8%9E%8D%E5%8C%962.png%22%2C%22height%22%3Anull%7D%2C%7B%22_1637%22%3Anull%2C%22width%22%3Anull%2C%22_1636%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E9%9B%AA%E4%BA%BA-%E8%9E%8D%E5%8C%963.png%22%2C%22height%22%3Anull%7D%5D%7D" valuetype="string" edittype="animation">
+                <p key="actions" value="%7B%22scaleY%22%3A1%2C%22fps%22%3A60%2C%22loop%22%3A0%2C%22action%22%3A%22%E6%89%93%E9%A2%A4%22%2C%22scaleX%22%3A1%2C%22frames%22%3A%5B%7B%22_1637%22%3A0%2C%22width%22%3A0%2C%22_1636%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E9%9B%AA%E4%BA%BA-%E8%A1%A8%E6%83%852.png%22%2C%22height%22%3A0%7D%2C%7B%22_1637%22%3A0%2C%22width%22%3A0%2C%22_1636%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E9%9B%AA%E4%BA%BA.png%22%2C%22height%22%3A0%7D%5D%7D%26%26%7B%22scaleY%22%3A1%2C%22fps%22%3A1%2C%22loop%22%3A1%2C%22action%22%3A%22%E8%9E%8D%E5%8C%96%22%2C%22scaleX%22%3A1%2C%22frames%22%3A%5B%7B%22_1637%22%3A0%2C%22width%22%3A0%2C%22_1636%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E9%9B%AA%E4%BA%BA-%E8%9E%8D%E5%8C%961.png%22%2C%22height%22%3A0%7D%2C%7B%22_1637%22%3A0%2C%22width%22%3A0%2C%22_1636%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E9%9B%AA%E4%BA%BA-%E8%9E%8D%E5%8C%962.png%22%2C%22height%22%3A0%7D%2C%7B%22_1637%22%3A0%2C%22width%22%3A0%2C%22_1636%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fcom%2F%E9%9B%AA%E4%BA%BA-%E8%9E%8D%E5%8C%963.png%22%2C%22height%22%3A0%7D%5D%7D" valuetype="string" edittype="animation">
                   <description>%E7%82%B9%E5%87%BB%E6%8C%89%E7%BA%BD%E7%BC%96%E8%BE%91%E5%8A%A8%E7%94%BB</description>
                 </p>
               </properties>
@@ -2118,7 +2117,7 @@
                 <p key="collision" value="false" valuetype="boolean">
                   <description>%E5%BD%93%E5%89%8D%E5%AE%9E%E4%BE%8B%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%A3%80%E6%B5%8B</description>
                 </p>
-                <p key="collisionData" value="%22%22" valuetype="string">
+                <p key="collisionData" value="%5Bobject%20_214%5D" valuetype="string">
                   <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
                 </p>
               </properties>
@@ -2690,7 +2689,7 @@
                 <p key="collisionData" value="0%2Fn13.59%7C200.35%2C87.23%7C201.95%2C99.15%7C203.50%2C104.00%7C194.60%2C96.20%7C158.45%2C104.75%7C122.65%2C99.35%7C87.75%2C95.00%7C32.25%2C87.45%7C16.90%2C71.50%7C-1.65%2C33.40%7C-0.15%2C13.30%7C11.95%2C5.10%7C39.15%2C21.60%7C70.15%2C-4.00%7C102.25%2C-3.50%7C148.00%2C2.50%7C176.95%2C-4.05%7C202.25" valuetype="string" edittype="collisionData">
                   <description>%E5%8F%82%E4%B8%8E%E7%A2%B0%E6%92%9E%E6%97%B6%E7%9A%84%E7%A2%B0%E6%92%9E%E6%95%B0%E6%8D%AE</description>
                 </p>
-                <p key="actions" value="%7B%22scaleY%22%3A1%2C%22fps%22%3A6%2C%22loop%22%3A0%2C%22action%22%3A%22stand%22%2C%22scaleX%22%3A1%2C%22frames%22%3A%5B%7B%22_1637%22%3Anull%2C%22width%22%3Anull%2C%22_1636%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E9%9D%99%E6%AD%A2(1).png%22%2C%22height%22%3Anull%7D%5D%7D%26%26%7B%22scaleY%22%3A1%2C%22fps%22%3A4%2C%22loop%22%3A0%2C%22action%22%3A%22run%22%2C%22scaleX%22%3A1%2C%22frames%22%3A%5B%7B%22_1637%22%3Anull%2C%22width%22%3Anull%2C%22_1636%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E8%B7%911(1).png%22%2C%22height%22%3Anull%7D%2C%7B%22_1637%22%3Anull%2C%22width%22%3Anull%2C%22_1636%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E8%B7%912(1).png%22%2C%22height%22%3Anull%7D%5D%7D%26%26%7B%22scaleY%22%3A1%2C%22fps%22%3A12%2C%22loop%22%3A0%2C%22action%22%3A%22yeah%22%2C%22scaleX%22%3A1%2C%22frames%22%3A%5B%7B%22_1637%22%3Anull%2C%22width%22%3Anull%2C%22_1636%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E8%83%9C%E5%88%A91(1).png%22%2C%22height%22%3Anull%7D%2C%7B%22_1637%22%3Anull%2C%22width%22%3Anull%2C%22_1636%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E8%83%9C%E5%88%A92(1).png%22%2C%22height%22%3Anull%7D%5D%7D%26%26%7B%22scaleY%22%3A1%2C%22fps%22%3A6%2C%22loop%22%3A0%2C%22action%22%3A%22jump%22%2C%22scaleX%22%3A1%2C%22frames%22%3A%5B%7B%22_1637%22%3Anull%2C%22width%22%3Anull%2C%22_1636%22%3Anull%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E8%B7%B3(1).png%22%2C%22height%22%3Anull%7D%5D%7D" valuetype="string" edittype="animation">
+                <p key="actions" value="%7B%22scaleY%22%3A1%2C%22fps%22%3A6%2C%22loop%22%3A0%2C%22action%22%3A%22stand%22%2C%22scaleX%22%3A1%2C%22frames%22%3A%5B%7B%22_1637%22%3A0%2C%22width%22%3A0%2C%22_1636%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E9%9D%99%E6%AD%A2(1).png%22%2C%22height%22%3A0%7D%5D%7D%26%26%7B%22scaleY%22%3A1%2C%22fps%22%3A4%2C%22loop%22%3A0%2C%22action%22%3A%22run%22%2C%22scaleX%22%3A1%2C%22frames%22%3A%5B%7B%22_1637%22%3A0%2C%22width%22%3A0%2C%22_1636%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E8%B7%911(1).png%22%2C%22height%22%3A0%7D%2C%7B%22_1637%22%3A0%2C%22width%22%3A0%2C%22_1636%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E8%B7%912(1).png%22%2C%22height%22%3A0%7D%5D%7D%26%26%7B%22scaleY%22%3A1%2C%22fps%22%3A12%2C%22loop%22%3A0%2C%22action%22%3A%22yeah%22%2C%22scaleX%22%3A1%2C%22frames%22%3A%5B%7B%22_1637%22%3A0%2C%22width%22%3A0%2C%22_1636%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E8%83%9C%E5%88%A91(1).png%22%2C%22height%22%3A0%7D%2C%7B%22_1637%22%3A0%2C%22width%22%3A0%2C%22_1636%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E8%83%9C%E5%88%A92(1).png%22%2C%22height%22%3A0%7D%5D%7D%26%26%7B%22scaleY%22%3A1%2C%22fps%22%3A6%2C%22loop%22%3A0%2C%22action%22%3A%22jump%22%2C%22scaleX%22%3A1%2C%22frames%22%3A%5B%7B%22_1637%22%3A0%2C%22width%22%3A0%2C%22_1636%22%3A0%2C%22source%22%3A%22resource%2FuserAsset%2Fsupermario%2F%E9%A9%AC%E9%87%8C%E5%A5%A5-%E8%B7%B3(1).png%22%2C%22height%22%3A0%7D%5D%7D" valuetype="string" edittype="animation">
                   <description>%E7%82%B9%E5%87%BB%E6%8C%89%E7%BA%BD%E7%BC%96%E8%BE%91%E5%8A%A8%E7%94%BB</description>
                 </p>
               </properties>

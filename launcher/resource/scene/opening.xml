@@ -13,7 +13,7 @@
     <item name="uiGuid" value="3060" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
-    <item name="x" value="957.9413169884363" valueDataType="number"/>
+    <item name="x" value="957.9413169884364" valueDataType="number"/>
     <item name="y" value="540.4415665202118" valueDataType="number"/>
     <item name="anchorX" value="0.5" valueDataType="number"/>
     <item name="anchorY" value="0.5" valueDataType="number"/>
@@ -32,9 +32,9 @@
     <item name="uiGuid" value="3063" valueDataType="string"/>
     <item name="global" value="false" valueDataType="boolean"/>
     <item name="visible" value="true" valueDataType="boolean"/>
-    <item name="x" value="996.7473932693745" valueDataType="number"/>
+    <item name="x" value="996.7473932693744" valueDataType="number"/>
     <item name="y" value="752.1779340764489" valueDataType="number"/>
-    <item name="anchorX" value="0.48416883706554475" valueDataType="number"/>
+    <item name="anchorX" value="0.4841688370655447" valueDataType="number"/>
     <item name="anchorY" value="0.6158143536360863" valueDataType="number"/>
     <item name="width" value="107.9739818174412" valueDataType="number"/>
     <item name="height" value="30.612277214341702" valueDataType="number"/>
@@ -64,7 +64,7 @@
     <item name="anchorX" value="0.1421498628689849" valueDataType="number"/>
     <item name="anchorY" value="-0.3331855324169212" valueDataType="number"/>
     <item name="width" value="94" valueDataType="number"/>
-    <item name="height" value="126.16455002201747" valueDataType="number"/>
+    <item name="height" value="126.16455002201748" valueDataType="number"/>
     <item name="angle" value="0" valueDataType="number"/>
     <item name="alpha" value="1" valueDataType="number"/>
     <item name="enabled" value="false" valueDataType="boolean"/>
